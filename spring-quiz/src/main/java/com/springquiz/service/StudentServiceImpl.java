@@ -14,7 +14,6 @@ public class StudentServiceImpl implements StudentService  {
 	@Autowired
 	StudentDao studentDao;
 	
-	
 	@Override
 	public List<Student> selectList() {
 		return studentDao.selectList();
