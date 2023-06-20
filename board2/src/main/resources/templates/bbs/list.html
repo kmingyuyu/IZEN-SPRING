@@ -38,13 +38,43 @@
 			</tr>
 		</thead>
 		<tbody id="lists">			
-
+			<tr th:if="${#lists.size(lists)} > 0 " th:each="board:${lists}">
+				<td class="num" th:text="${board.num}"></td>
+				<td class="subject">
+				<a th:href="|@{${articleUrl}}&num=@{${board.num}}|" th:text="${board.subject}"></a>
+				</td>
+				<td class="name" th:text="${board.name}"></td>
+				<td class="created" th:text="${board.created}"></td>
+				<td class="hitCount" th:text="${board.hitCount}"></td>
+			</tr>
+			
+			<tr th:if="${#lists.size(lists)} > 0">
+				<td colspan="5" id="footer">
+				<!-- 태그를 화면단에 표현하고 싶으면 utext -->
+					<a th:utext="${pageIndexList}"></a>				
+				</td>			
+			</tr>
+			<tr th:if="${#lists.size(lists)} < 0">
+				<td colspan="5">
+					등록된 게시물이 없습니다.
+				</td>			
+			</tr>
 		</tbody>		
 	</table>
 	</div>
 	</div>
 <th:block layout:fragment="script">
 	<script th:inline="javascript">
+	var errorMessage1 = [[${param.errorMessage}]]; //get방식으로 데이터를 가져올수 있음
+	var errorMessage2 = [[${errorMessage}]]; //post방식으로 데이터를 가져올수 있음
+	if(errorMessage1 != null){
+	alert(errorMessage1);
+	};
+	if(errorMessage2 != null){
+	alert(errorMessage2);
+	};
+	
+	
 		function sendIt() {
 			var f = document.searchForm;
 			
@@ -57,15 +87,8 @@
 				return;
 				
 			}
-			
-			alert("검색어를 입력 완료");
-			/*f.submit();  */
-			
-			
+			 f.submit();   
 		}
-	
-	
-	
 	
 	</script>
 </th:block>

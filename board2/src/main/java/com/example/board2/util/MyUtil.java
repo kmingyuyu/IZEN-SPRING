@@ -25,7 +25,9 @@ public class MyUtil {
 		int currentPageSetup; // <이전 버튼에 들어갈 값
 		int page; //그냥 페이지 숫자를 클릭 했을때 들어갈 값
 		
-		if(currentPage == 0 || totalPage == 0) return ""; //데이터가 없다
+		if(currentPage == 0 || totalPage == 0) { 
+			return ""; //데이터가 없다
+		}
 		
 //		검색어가 있을때 : list?searchKey=name&searchValue=춘식
 		if(listUrl.indexOf("?") != -1) {
@@ -73,8 +75,14 @@ public class MyUtil {
 		
 		
 //		3. >다음 버튼 만들기
+		if(totalPage - currentPageSetup > numperBlock) {
+			sb.append("<a href=\"" + listUrl + "pageNum=" + page + "\">다음▶</a>&nbsp;");
+		}
+		
+		
 		
 //		4. 버튼 합쳐서 문자열로 리턴
+		System.out.println(sb.toString());
 		return sb.toString();
 		
 		

@@ -1,5 +1,6 @@
 package com.example.board2.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.List;
@@ -31,8 +32,52 @@ public class BoardController {
 		return "index";
 	}
 	
-	@RequestMapping(value = "/article" , method= RequestMethod.GET) 
-	public String article() {
+	@RequestMapping(value = "/article" ,
+			method = {RequestMethod.GET,RequestMethod.POST}) 
+	public String article(HttpServletRequest request , Model model) {
+		
+		try {
+			int num = Integer.parseInt(request.getParameter("num"));
+			String pageNum = request.getParameter("pageNum");
+			String searchKey = request.getParameter("searchKey");
+			String searchValue = request.getParameter("searchValue");
+			
+			if(searchValue != null) {
+				searchValue = URLDecoder.decode(searchValue , "UTF-8");
+			}
+			
+//			1. 조회수 늘리기
+			boardService.updateHitCount(num);
+			
+//			2. 게시물 데이터 가져오기
+			Board board = boardService.getReadData(num);
+			
+			if(board == null) {
+				return "redirect:/list?pageNum=" + pageNum;
+			}
+//			게시글의 라인수를 구한다
+			int lineSu = board.getContent().split("\n").length;
+			
+			String param = "pageNum=" + pageNum;
+			
+			if(searchValue != null && !searchValue.equals("")) {
+//				searchValue에 검색어가 있다면
+				param += "&searchKey=" + searchKey;
+				param += "&searchValue=" + URLEncoder.encode(searchValue , "UTF-8"); //컴퓨터의 언어로 인코딩
+			}
+			
+			model.addAttribute("board" , board);
+			model.addAttribute("params" , param);
+			model.addAttribute("lineSu" , lineSu);
+			model.addAttribute("pageNum" , pageNum);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			model.addAttribute("errorMessage", "게시글을 불러오는 중 에러가 발생했습니다");
+			
+		}
+		
 		return "bbs/article";
 	}
 	
@@ -57,6 +102,8 @@ public class BoardController {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+			model.addAttribute("errorMessage", "게시글을 작성중 에러가 발생했습니다");
+			return "bbs/created";
 		}
 		
 		return "redirect:/list";
@@ -105,13 +152,14 @@ public class BoardController {
 //			3.전체 게시물 리스트를 가져온다.
 			List<Board> lists = boardService.getLists(searchKey, searchValue, start, end);
 			
+			
 //			4.페이징 처리를 해준다 (실행 단계)
 			String param = "";
 			
-			if(searchValue != null && searchValue.equals("")) {
+			if(searchValue != null && !searchValue.equals("")) {
 //				searchValue에 검색어가 있다면
 				param = "searchKey=" + searchKey;
-				param += "&searchValue" + URLEncoder.encode(searchValue , "UTF-8"); //컴퓨터의 언어로 인코딩
+				param += "&searchValue=" + URLEncoder.encode(searchValue , "UTF-8"); //컴퓨터의 언어로 인코딩
 			}
 			
 			String listUrl = "/list";
@@ -120,12 +168,21 @@ public class BoardController {
 			
 			String pageIndexList = myUtil.pageIndexList(currentPage, totalPage, listUrl);
 			
+			String articleUrl = "/article?pageNum=" + currentPage ;
 			
+			if(!param.equals("")) {
+				articleUrl += "&" + param;
+			}
 			
+			model.addAttribute("lists" , lists); //db에서 가져온 전체 게시물
+			model.addAttribute("articleUrl" , articleUrl); //상세페이지로 이동하기 위한 url
+			model.addAttribute("pageIndexList" , pageIndexList); //하단 버튼
+			model.addAttribute("dataCount" , dataCount); //전체 게시물 갯수
 			
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+			model.addAttribute("errorMessage", "리스트를 블러오는 중 에러가 발생했습니다");
 		}
 		
 		
@@ -135,15 +192,42 @@ public class BoardController {
 //	수정페이지 보여줌
 	@RequestMapping(value = "/updated" , method= RequestMethod.GET) 
 	public String updated(HttpServletRequest request , Model model) {
-		int num = Integer.parseInt(request.getParameter("num"));
 		
-		String pageNum = request.getParameter("pageNum");
-		String searchKey = request.getParameter("searchKey");
-		String searchValue = request.getParameter("searchValue");
-		
-		if(searchValue != null) {
+		try {
+			
+			int num = Integer.parseInt(request.getParameter("num"));
+			
+			String pageNum = request.getParameter("pageNum");
+			String searchKey = request.getParameter("searchKey");
+			String searchValue = request.getParameter("searchValue");
+			
+			if(searchValue != null) {
+				searchValue = URLDecoder.decode(searchValue , "UTF-8");
+			}
+			
+			Board board = boardService.getReadData(num);
+			
+			if(board == null) {
+				return "redirect:/list?pageNum=" + pageNum;
+				
+			}
+			
+			String param = "pageNum=" + pageNum;
+			
+			if(searchValue != null && !searchValue.equals("")) {
+//				searchValue에 검색어가 있다면
+				param += "&searchKey=" + searchKey;
+				param += "&searchValue=" + URLEncoder.encode(searchValue , "UTF-8"); //컴퓨터의 언어로 인코딩
+			}
+			
+			model.addAttribute("board", board);
+			model.addAttribute("pageNum", pageNum);
+			model.addAttribute("params", param);
+			model.addAttribute("searchKey", searchKey);
+			model.addAttribute("searchValue", searchValue);
 			
 			
+		} catch (Exception e) {
 		}
 		
 		
@@ -152,8 +236,65 @@ public class BoardController {
 	
 //	수정하는 기능
 	@RequestMapping(value = "/updated_ok" , method= RequestMethod.POST) 
-	public String updatedOK() {
-		return "redirect:/list";
+	public String updatedOK(Board board , HttpServletRequest request , Model model) {
+		
+		String pageNum = request.getParameter("pageNum");
+		String searchKey = request.getParameter("searchKey");
+		String searchValue = request.getParameter("searchValue");
+		String param = "?pageNum=" + pageNum;
+		
+		try {
+			board.setContent(board.getContent().replaceAll("</br>", "\r\n"));
+			boardService.updateData(board);
+			
+			if(searchValue != null && !searchValue.equals("")) {
+//				searchValue에 검색어가 있다면
+				param += "&searchKey=" + searchKey;
+				param += "&searchValue=" + URLEncoder.encode(searchValue , "UTF-8"); //컴퓨터의 언어로 인코딩
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+			try {
+				param += "&errorMessage=" + URLEncoder.encode("게시글 수정 중 에러가 발생했습니다" , "UTF-8");
+			} catch (UnsupportedEncodingException e1) {
+				e1.printStackTrace();
+			}
+		}
+		
+		return "redirect:/list" + param;
+	}
+	
+	@RequestMapping(value = "/deleted_ok" , method = {RequestMethod.GET})
+	public String deleteOk(HttpServletRequest request , Model model) {
+		int num = Integer.parseInt(request.getParameter("num"));
+		String pageNum = request.getParameter("pageNum");
+		String searchKey = request.getParameter("searchKey");
+		String searchValue = request.getParameter("searchValue");
+		String param = "?pageNum=" + pageNum;
+		
+		
+		try {
+			boardService.deleteData(num);
+			
+			if(searchValue != null && !searchValue.equals("")) {
+//				searchValue에 검색어가 있다면
+				param += "&searchKey=" + searchKey;
+				param += "&searchValue=" + URLEncoder.encode(searchValue , "UTF-8"); //컴퓨터의 언어로 인코딩
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			try {
+				param += "&errorMessage=" + URLEncoder.encode("게시글 삭제 중 에러가 발생했습니다" , "UTF-8");
+			} catch (UnsupportedEncodingException e1) {
+				e1.printStackTrace();
+			}
+		}
+		
+		return "redirect:/list" + param;
+		
 	}
 	
 	
