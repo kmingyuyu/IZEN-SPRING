@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+<th:block layout:fragment="css">
+<link rel="stylesheet" type="text/css" href="css/adminMain.css"/>
+</th:block>
+      
+      <div layout:fragment="content" class="admain">
+      	<form action="adminMain" method="post" name="searchform" class="admin_header">
+		<a href="adminMain">
+			<img alt="로고" src="img/m'ing's book-logo.png" width="300" />	 
+		</a>     	
+		<select name="searchKey">
+			<option value="">1</option>
+			<option value="">2</option>
+			<option value="">3</option>
+		</select>      	
+      	<input type="text" name="searchValue">
+      	<input type="button" value="검색">
+      	</form>
+      	<div th:each="book:${lists}">
+      		<img alt="책표지" th:src="${book.img}" width="100">
+      		<p th:text="${book.subject}">제목</p>
+      		<p th:text="${book.writer}">글쓴이</p>
+      		<p th:text="${book.publisher}">출판사</p>
+      		<p th:text="${book.type}">종류</p>
+      		<p th:text="${book.publication_date}">출간일</p>
+      		<p th:text="${book.inventory}">남은</p>
+      	
+      	
+      	
+      	
+      	
+      	</div>
+      </div>
+      
+      
+      
+</html>

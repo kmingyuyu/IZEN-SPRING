@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.admain {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.admin_header {
+	display: flex;
+	align-items: center;
+	
+}
+
+.admin_header a {
+	float: left	;
+}
+
+

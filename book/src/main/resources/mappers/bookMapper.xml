@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.book.dao.BookDao">
+	<select id="getLists" parameterType="map" resultType="Book">
+	select 
+	subject , writer , publisher, type , img , 
+	to_char(publication_date , 'YYYY.MM.DD') publication_date , inventory
+	from book
+	order by publication_date desc
+	</select>
+	
+
+</mapper>
