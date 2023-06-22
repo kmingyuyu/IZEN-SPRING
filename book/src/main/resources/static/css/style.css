@@ -32,6 +32,7 @@ ul {
 }
 
 .footer {
+	margin-top: 100px;
     height: 200px;
     display: flex;
     justify-content: center;
