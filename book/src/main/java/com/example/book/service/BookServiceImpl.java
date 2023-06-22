@@ -14,9 +14,20 @@ public class BookServiceImpl implements BookService  {
 	@Autowired
 	private BookDao bookDao;
 	
+
 	@Override
-	public List<Book> getLists() {
-		return bookDao.getLists();
+	public List<Book> getLists(String searchKey, String searchValue, int start, int end) {
+		return bookDao.getLists(searchKey, searchValue, start, end);
+	}
+
+	@Override
+	public int getDataCount(String searchKey, String searchValue) {
+		return bookDao.getDataCount(searchKey, searchValue);
+	}
+
+	@Override
+	public Book getReadData(int num) {
+		return bookDao.getReadData(num);
 	}
  
 }

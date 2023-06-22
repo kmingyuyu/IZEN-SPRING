@@ -6,36 +6,67 @@
 <th:block layout:fragment="css">
 <link rel="stylesheet" type="text/css" href="css/adminMain.css"/>
 </th:block>
-      
       <div layout:fragment="content" class="admain">
-      	<form action="adminMain" method="post" name="searchform" class="admin_header">
-		<a href="adminMain">
-			<img alt="로고" src="img/m'ing's book-logo.png" width="300" />	 
-		</a>     	
-		<select name="searchKey">
-			<option value="">1</option>
-			<option value="">2</option>
-			<option value="">3</option>
+      	<form action="adminMain" method="post" name="searchform" class="form">	
+		<select name="searchKey" class="form_select">
+			<option value="subject">제목</option>
+			<option value="writer">작가</option>
+			<option value="publisher">출판사</option>
 		</select>      	
-      	<input type="text" name="searchValue">
-      	<input type="button" value="검색">
+      	<input type="text" name="searchValue"/>
+      	<input type="button" value="검색"  onclick="sendIt();"/>
       	</form>
-      	<div th:each="book:${lists}">
-      		<img alt="책표지" th:src="${book.img}" width="100">
-      		<p th:text="${book.subject}">제목</p>
-      		<p th:text="${book.writer}">글쓴이</p>
-      		<p th:text="${book.publisher}">출판사</p>
-      		<p th:text="${book.type}">종류</p>
-      		<p th:text="${book.publication_date}">출간일</p>
-      		<p th:text="${book.inventory}">남은</p>
-      	
-      	
-      	
-      	
-      	
+      	 	
+      	<div th:if="${#lists.size(lists)} > 0" class="pageing">
+      		<a th:utext="${pageIndexList}"></a>
       	</div>
+      	
+      	<div th:if="${#lists.size(lists)} > 0 " th:each="book:${lists}" class="book">
+      		<div class="book_img">
+      		<a th:href="|@{${articleUrl}}&num=@{${book.num}}|">
+      		<img alt="책표지" th:src="${book.img}">
+      		</a>
+      		</div>
+      		<div class="book_txt">
+      		<a th:href="|@{${articleUrl}}&num=@{${book.num}}|" th:text="${book.subject}" class="book_subject"></a>
+      		<span th:text="${book.writer}" class="book_writer"></span>
+      		<span> | </span>
+      		<span th:text="${book.publisher}" class="book_publisher"></span>
+      		<span> | </span>
+      		<span th:text="${book.publication_date}" class="book_publication_date"></span>
+      		<p th:text="${book.type}" class="book_type"></p>
+      		<span style="font-weight:bold;" >남은 재고 : </span>
+      		<span th:text="${book.inventory}" class="book_inventory"></span>
+      		<p th:text="${book.story}" class="book_story"></p>
+      		</div>
+      		
+      	
+      	</div >
+     
+      	
+      	
+      
       </div>
       
+      <th:block layout:fragment="script">
+      <script th:inline="javascript">
+      function sendIt() {
+			var f = document.searchform;
+			
+			var str = f.searchValue.value;
+			str = str.trim();
+			
+			if(!str) {
+				alert("검색어를 입력 해주세요");
+				f.searchValue.focus();
+				return;
+				
+			}
+			 f.submit();   
+		}	
+      
+      </script>
+      </th:block>
       
       
 </html>

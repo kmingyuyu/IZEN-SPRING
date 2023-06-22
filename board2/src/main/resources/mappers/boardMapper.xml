@@ -19,7 +19,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select nvl(count(*) , 0)
 		from board
 		where ${searchKey} like '%' || #{searchValue} || '%'		
-	</select>
+	</select> 
 	
 	<select id="getLists" parameterType="map" resultType="Board">
 		select * from (

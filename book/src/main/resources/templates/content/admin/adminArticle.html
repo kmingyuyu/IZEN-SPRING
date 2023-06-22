@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-</head>
-<body>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
 
-</body>
+<th:block layout:fragment="css">
+<link rel="stylesheet" type="text/css" href="css/article.css"/>
+</th:block>
+
+	<div layout:fragment="content" class="article">
+		<div class="article_img">
+			<img alt="책표지" th:src="${book.img}">
+		</div>
+		<div class ="article_txt">
+			<p th:text="${book.subject}"></p>
+			
+			<p th:text="${book.writer}" class="book_tx"></p>
+			<p class="line"> - </p>
+			<p th:text="${book.publisher}" class="book_tx"></p>
+			<p class="line"> - </p>
+			<p th:text="${book.publication_date}" class="book_tx"></p>
+			<p class="line"> - </p>
+			<p th:text="${book.story}" class="story_box"></p>
+		</div>
+		</div>
+
+
 </html>
