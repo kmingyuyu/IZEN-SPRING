@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+* {
+	margin:0px;
+	padding:0px;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+select {
+	cursor: pointer;
+}
+
+
+body {	
+	font-size: 9pt;
+	font-family:굴림;
+}
+
+.main_logo {
+	display: flex;
+	justify-content: center;
+}
+
+.main {
+	position: relative;
+	top: 200px;
+	width: 600px;
+	margin:0 auto;
+	
+}
+
+.form {
+	margin: 0 auto;
+	width: 600px;
+	display: flex;
+	justify-content: center;
+	box-shadow: 3px 3px 3px 3px rgb(238, 238, 238);
+	border-radius: 12px;
+	border-top: 1px solid  rgb(238, 238, 238);
+	
+}
+
+.form:hover {
+	box-shadow: 4px 4px 4px 4px rgb(226, 226, 226);
+}
+
+.form_select {
+	color: rgb(133, 133, 133);
+	border: none;
+	border-left: 1px solid  rgb(238, 238, 238);
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+	font-size: 17px;
+	font-weight: bold;
+	padding: 10px 15px 10px 15px;
+	outline: none;
+	
+}
+
+.form_label {
+	border: none;
+	padding: 20px 20px 20px 30px;
+	border-left: none;
+	border-right: none;
+	width: 800px;
+	height: 20px;
+	
+}
+
+.form_button{
+	cursor: pointer;
+	background-color:  rgb(192, 192, 192);
+	width: 120px;
+	border: none;
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+	background-image: url(/img/ic_search.png);
+	background-repeat: no-repeat;	
+	background-size: 50%;
+	background-position: center;
+}
+
+.form_label:focus {
+	outline: none;
+}
+
+.form_label::placeholder {
+	color: rgb(133, 133, 133);
+	font-size: 17px;
+	font-weight: bold;
+	letter-spacing :0.7px;
+}
+
+.board_a {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	
+}
+
+.board_bt {
+	cursor: pointer;
+	border: none;
+	border-radius: 12px;
+	background-color:  rgb(255, 255, 255);
+	box-shadow: 3px 3px 3px 3px rgb(238, 238, 238);
+	color: silver;;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px;
+	
+}
+
+.board_bt:hover {
+	color: white;
+	box-shadow: 4px 4px 4px 4px rgb(226, 226, 226);
+	background-color:  rgb(200, 200, 200);
+}
+
+

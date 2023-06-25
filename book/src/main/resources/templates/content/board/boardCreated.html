@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<th:block layout:fragment="css">
+<link rel="stylesheet" type="text/css" href="css/boardCreated.css"/>
+</th:block>
+	<div layout:fragment="content" class="board_created">
+		<form action="/boardCreated" method="post" name="myForm" class="created_form" >
+	<div id="bbsCreated">
+		
+		<div class="bbsCreated_bottomLine">
+			<dl>
+				<dt>제&nbsp;&nbsp;&nbsp;&nbsp;목</dt>
+				<dd>
+				<input type="text" name="subject" size="60" 
+				maxlength="100" class="boxTF" placeholder="제목을 입력 해주세요"/>
+				</dd>
+			</dl>		
+		</div>
+		
+		<div class="bbsCreated_bottomLine">
+			<dl>
+				<dt>E-Mail</dt>
+				<dd>
+				<input type="text" name="email" size="35" 
+				maxlength="50" class="boxTF" placeholder="이메일을 입력 해주세요"/>
+				</dd>
+			</dl>		
+		</div>
+		
+		<div id="bbsCreated_content">
+			<dl>
+				<dt>문의 사항</dt>
+				<dd>
+				<input type="text" class="boxTA" placeholder="문의사항을 입력 해주세요"/>
+				</dd>
+			</dl>
+		</div>
+		
+		<div class="bbsCreated_noLine">
+			<dl>
+				<dt>패스워드</dt>
+				<dd>
+				<input type="password" name="pwd" size="35" 
+				maxlength="7" class="boxTF" placeholder="비밀번호를 입력 해주세요"/>
+				</dd>
+			</dl>		
+		</div>	
+		
+	
+	</div>
+	
+	<div id="bbsCreated_footer">
+		<input type="button" value=" 등록하기 " class="btn2" onclick="sendIt();" />
+		<input type="reset" value=" 다시입력 " class="btn2" 
+		onclick="document.myForm.subject.focus();" />
+		<input type="button" value=" 작성취소 " class="btn2"
+		onclick="javascript:location.href='/list';" />
+	</div>
+	</form>	
+	</div>
+
+
+</html>

@@ -26,13 +26,16 @@ public class BookController {
 	private BookUtil bookUtil;
 	
 	
+	
 //	최상단
 	@RequestMapping(value = "/")
-	public String mainPage() {
-		return "mainPage";
+	public String main() {
+		return "main";
 	}
 	
-	@RequestMapping(value="/adminMain" , method= {RequestMethod.GET , RequestMethod.POST})
+	
+	
+	@RequestMapping(value="/bookMain" , method= {RequestMethod.GET , RequestMethod.POST})
 	public String list(HttpServletRequest request , Model model , Book book) {
 //			
 		try {
@@ -78,13 +81,13 @@ public class BookController {
 				param += "&searchValue=" + URLEncoder.encode(searchValue , "UTF-8"); //컴퓨터의 언어로 인코딩
 			}
 			
-			String listUrl = "/adminMain";
+			String listUrl = "/bookMain";
 			
 			if(!param.equals("")) listUrl += "?" + param;
 			
 			String pageIndexList = bookUtil.pageIndexList(currentPage, totalPage, listUrl);	
 			
-			String articleUrl = "/adminArticle?pageNum=" + currentPage ;
+			String articleUrl = "/bookArticle?pageNum=" + currentPage ;
 			
 			if(!param.equals("")) {
 				articleUrl += "&" + param;
@@ -103,10 +106,10 @@ public class BookController {
 				model.addAttribute("errorMessage", "리스트를 블러오는 중 에러가 발생했습니다");
 		}
 		
-		return "content/admin/adminMain";
+		return "content/book/bookMain";
 		}
 		
-		@RequestMapping(value="/adminArticle" , method = {RequestMethod.GET,RequestMethod.POST})
+		@RequestMapping(value="/bookArticle" , method = {RequestMethod.GET,RequestMethod.POST})
 		public String article (HttpServletRequest request , Model model) {
 			
 			try {
@@ -122,7 +125,7 @@ public class BookController {
 				Book book = bookService.getReadData(num);
 				
 				if(book == null) {
-					return "redirect:/adminMain?pageNum=" + pageNum;
+					return "redirect:/bookMain?pageNum=" + pageNum;
 				}
 				
 				String param = "pageNum=" + pageNum;
@@ -140,7 +143,7 @@ public class BookController {
 			} catch (Exception e) {
 			}
 			
-			return "content/admin/adminArticle";
+			return "content/book/bookArticle";
 		}
 		
 		

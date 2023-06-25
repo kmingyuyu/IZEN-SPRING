@@ -12,7 +12,6 @@ body {
 
 /* 하이퍼링크 css */
 a {
-	cursor: hand;
 	color: #000000;
 	text-decoration: none;
 	font-size: 9pt;
@@ -24,12 +23,123 @@ ul {
 	list-style: none;
 }
 
+
 .header {
-	height: 80px;
+	background-color: white;
+	width: 100%;
+	position: fixed;
+ 	 top: 0; left: 0;
+	box-shadow: 0 10px 10px -5px rgb(239, 239, 239);
+	margin-bottom: 50px;
+}
+
+.header_nav {
+	padding-top: 20px;
+	width: 1000px;
+	margin:0 auto;
+	display: flex;
+	justify-content: right;
+}
+
+.header_nav a {
+	letter-spacing :0.3px;
+	font-weight: bold;
+	color:RGB(148, 148, 148);
+	}
+	
+
+.header_box {
+	height: 100px;
+	width: 1000px;
+	display: flex;
+	align-items: center;
+	margin:0 auto;
+}
+
+.form_header {
+	margin-left: 30px;
+	width: 500px;
+	height: 40px;
+	display: flex;
+	border-radius: 12px;
+	border: 1px solid  rgb(238, 238, 238);
+	
+}
+
+
+.form_select {
+	color: rgb(133, 133, 133);
+	border: none;
+	border-left: 1px solid  rgb(238, 238, 238);
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 5px 7px 5px 7px;
+	outline: none;
+	
+}
+
+.form_label {
+	border: none;
+	padding: 10px 10px 10px 15px;
+	border-left: none;
+	border-right: none;
+	width: 550px;
+	
+}
+
+.form_button{
+	background-color:  rgb(192, 192, 192);
+	width: 80px;
+	border: none;
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+	background-image: url(/img/ic_search.png);
+	background-repeat: no-repeat;	
+	background-size: 40%;
+	background-position: center;
+}
+
+.form_label:focus {
+	outline: none;
+}
+
+.form_label::placeholder {
+	color: rgb(133, 133, 133);
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing :0.7px;
+}
+
+.board_a {
+	margin-top: 20px;
 	display: flex;
 	justify-content: center;
-	border-bottom: 1px solid #053c67;
+	
 }
+
+.board_bt {
+	border: none;
+	border-radius: 12px;
+	background-color:  rgb(255, 255, 255);
+	box-shadow: 3px 3px 3px 3px rgb(238, 238, 238);
+	color: silver;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 10px;
+	
+}
+
+.board_bt:hover {
+	color: white;
+	box-shadow: 4px 4px 4px 4px rgb(226, 226, 226);
+	background-color:  rgb(200, 200, 200);
+}
+
+
+
+
 
 .footer {
 	margin-top: 100px;
