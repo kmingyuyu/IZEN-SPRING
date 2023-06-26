@@ -104,7 +104,29 @@ public class BoardController {
 		return "content/board/boardCreated";
 	}
 	
+	@RequestMapping(value ="/boardCreated" , method=RequestMethod.POST)
+	public String createdOK(Board board , HttpServletRequest request , Model model ) {
+		
+		try {
+			int maxNum = boardService.maxNum_board();
+			
+			board.setNum(maxNum + 1); // nym컬럼에 들어갈 값을 1 증가시켜준다.
+			
+			boardService.insertData_board(board);
+			model.addAttribute("clearMessage", "게시글 작성이 완료 되었습니다");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+			 model.addAttribute("errorMessage", "게시글을 작성중 에러가 발생했습니다"); 
+			 return "content/board/boardCreated";
+			 
+		}
+		
+		return "redirect:/";
 	
+	
+
+	}
 }
-	
 	

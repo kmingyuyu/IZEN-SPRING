@@ -36,5 +36,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		values(#{num} , #{pwd} ,  #{email} , #{m_text} , sysdate)
 	</insert>
 	
+	<select id="maxNum_board" resultType="int">
+		select nvl(max(num) , 0)
+		from board
+	</select>
+	
 
 </mapper>

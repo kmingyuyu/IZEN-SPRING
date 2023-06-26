@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\MINGYU SPRING\board2"/>
+			<item value="C:\MINGYU SPRING\book\src\main\resources\templates\content\book\bookMain.html"/>
+			<item value="C:\MINGYU SPRING\shopmax"/>
+			<item value="C:\MINGYU SPRING\book"/>
 			<item value="C:\Users\82107\Desktop\수업\IZEN.SPRING\board2"/>
 			<item value="C:\Users\82107\Desktop\수업\IZEN.SPRING\book"/>
-			<item value="C:\MINGYU SPRING\book"/>
 			<item value="C:\MINGYU SPRING\portfolio"/>
 			<item value="C:\MINGYU SPRING\spring-board"/>
-			<item value="C:\MINGYU SPRING\board2"/>
 			<item value="C:\MINGYU SPRING\spring-quiz"/>
 			<item value="C:\MINGYU SPRING\spring-project"/>
 		</list>

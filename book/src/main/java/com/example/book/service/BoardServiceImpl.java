@@ -35,4 +35,9 @@ public class BoardServiceImpl implements BoardService  {
 		
 	}
 
+	@Override
+	public int maxNum_board() {
+		return boardDao.maxNum_board();
+	}
+
 }

@@ -13,4 +13,6 @@ public interface BoardService {
 	
 	public void insertData_board(Board board);
 	
+	public int maxNum_board();
+	
 }

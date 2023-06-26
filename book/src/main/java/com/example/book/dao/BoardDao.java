@@ -17,4 +17,6 @@ public interface BoardDao {
 	
 	public void insertData_board(Board board);
 	
+	public int maxNum_board();
+	
 }

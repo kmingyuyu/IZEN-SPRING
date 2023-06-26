@@ -2,13 +2,22 @@
 
 .board_created{
 	padding: 200px;
-	width: 1000px;
+	width: 600px;
 	margin:0 auto;
 }
 
-.created_form {
+.created_hd {
+	
 }
 
+.created_hd p:nth-child(1){
+	color:#6f6f6f;
+	font-size:20px;
+	font-weight:bold;
+	border-left: 3px solid #4160A8;
+	padding-left: 5px;
+	margin-bottom: 15px;
+}
 
 
 #bbs_title {
@@ -94,11 +103,23 @@
 	clear:both;
 	height:50px;
 	line-height:50px;
-	margin-bottom:20px;
+	margin-top:3px;
 	text-align:center;
 }
 
+.btn2 {
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+	color:white;
+	background-color:#4160A8;
+	font-size:15px;
+	font-weight:bold;
+	padding: 5px 10px;
+}
+
 .boxTF {
+	outline: none;
 	border:none; 
 	height:15px; 
 	margin-top:7px; 
@@ -110,10 +131,12 @@
 }
 
 .boxTA { 
+	resize: none;
+	outline: none;
 	border:none;
 	width: 400px;
-	height:50px; 
-	padding:2px 2px 2px 2px; 
+	height:150px; 
+	padding:10px 2px 2px 2px; 
 	border-color:#666666; 
 	background-color:#ffffff; 
 	font-family:"굴림"; 

@@ -6,9 +6,11 @@
 <link rel="stylesheet" type="text/css" href="css/boardCreated.css"/>
 </th:block>
 	<div layout:fragment="content" class="board_created">
+		<div class="created_hd">
+			<p>문의사항을 입력 해주세요</p>
+		</div>
 		<form action="/boardCreated" method="post" name="myForm" class="created_form" >
 	<div id="bbsCreated">
-		
 		<div class="bbsCreated_bottomLine">
 			<dl>
 				<dt>제&nbsp;&nbsp;&nbsp;&nbsp;목</dt>
@@ -17,6 +19,17 @@
 				maxlength="100" class="boxTF" placeholder="제목을 입력 해주세요"/>
 				</dd>
 			</dl>		
+		</div>
+		
+		
+		
+		<div id="bbsCreated_content">
+			<dl>
+				<dt>문의 사항</dt>
+				<dd>
+				<textarea name="content" rows="50" cols="20" class="boxTA" placeholder="문의사항을 입력 해주세요"/></textarea>
+				</dd>
+			</dl>
 		</div>
 		
 		<div class="bbsCreated_bottomLine">
@@ -28,16 +41,6 @@
 				</dd>
 			</dl>		
 		</div>
-		
-		<div id="bbsCreated_content">
-			<dl>
-				<dt>문의 사항</dt>
-				<dd>
-				<input type="text" class="boxTA" placeholder="문의사항을 입력 해주세요"/>
-				</dd>
-			</dl>
-		</div>
-		
 		<div class="bbsCreated_noLine">
 			<dl>
 				<dt>패스워드</dt>
@@ -52,14 +55,64 @@
 	</div>
 	
 	<div id="bbsCreated_footer">
-		<input type="button" value=" 등록하기 " class="btn2" onclick="sendIt();" />
-		<input type="reset" value=" 다시입력 " class="btn2" 
-		onclick="document.myForm.subject.focus();" />
-		<input type="button" value=" 작성취소 " class="btn2"
-		onclick="javascript:location.href='/list';" />
+		<input type="button" value=" 등 록 " class="btn2" onclick="sendIt();" />
 	</div>
 	</form>	
 	</div>
-
+<th:block layout:fragment="script">
+	<script th:inline="javascript">
+	 	var errorMessage = [[${errorMessage}]];
+	 		
+			if(errorMessage != null){
+			alert(errorMessage);
+		}; 
+	
+		function sendIt(){
+			var f= document.myForm; //폼 태그
+			var str = f.subject.value; // 제목에 입력된 값을 가져온다.
+			str = str.trim(); //공백을 없애주는 함수
+			
+			if(!str){
+				alert("제목을 입력 해주세요");
+				f.subject.focus();
+				return;
+			}
+			
+			str = f.content.value;
+			str = str.trim();
+			
+			if(!str){
+				alert("내용을 입력 해주세요");
+				f.content.focus();
+				return;
+			}
+			
+			
+			str = f.email.value;
+			str = str.trim();
+			/* 
+			if(!str){
+				if(!isValidEmail(str)){
+					alert("정상적인 이메일을 입력해주세요");
+					f.email.focus();
+					return;
+				}
+			} */
+			
+			str = f.pwd.value;
+			str = str.trim();
+			
+			if(!str){
+				alert("패스워드를 입력 해주세요");
+				f.pwd.focus();
+				return;
+			}
+			
+			f.submit();
+		 	alert(clearMessage);
+			
+		}
+	</script>
+</th:block>
 
 </html>
