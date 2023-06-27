@@ -42,7 +42,8 @@ ul {
 }
 
 .header_nav a {
-	letter-spacing :0.3px;
+	font-size:11px;
+	letter-spacing :0.5px;
 	font-weight: bold;
 	color:RGB(148, 148, 148);
 	}
@@ -111,6 +112,7 @@ ul {
 	font-weight: bold;
 	letter-spacing :0.7px;
 }
+
 
 .board_a {
 	margin-top: 20px;

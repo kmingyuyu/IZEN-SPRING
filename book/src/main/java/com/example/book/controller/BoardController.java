@@ -40,7 +40,7 @@ public class BoardController {
 			String searchValue = request.getParameter("searchValue");
 			
 			if(searchValue == null) {
-				searchKey = "writer"; // 검색 키워드 디폴트 : ??
+				searchKey = "subject"; // 검색 키워드 디폴트 : ??
 				searchValue = "";
 			}else {
 				if(request.getMethod().equalsIgnoreCase("GET")) {

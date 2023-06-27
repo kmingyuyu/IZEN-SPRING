@@ -8,7 +8,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="getLists_board" parameterMap="map" resultType="Board">
 	select * from (
     select rownum rnum , data.* from (
-    select num , pwd , email , m_text , to_char(reg_date , 'YYYY.MM.DD') reg_date 
+    select num ,subject, pwd , email , m_text , to_char(reg_date , 'YYYY.MM.DD') reg_date 
     from board
     where ${searchKey} like  '%' || #{searchValue} ||'%'
     order by reg_date desc
@@ -25,7 +25,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<select id="getReadData_board" parameterType="int" resultType="Board">
-	select num , pwd , email , m_text , to_char(reg_date , 'YYYY.MM.DD') reg_date 
+	select num ,subject, pwd , email , m_text , to_char(reg_date , 'YYYY.MM.DD') reg_date 
 	from board
 	where num = #{num}
 	</select>
@@ -33,7 +33,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="insertData_board" parameterType="Board">
 		insert into 
 		board 
-		values(#{num} , #{pwd} ,  #{email} , #{m_text} , sysdate)
+		values(#{num} , #{subject}, #{pwd} ,  #{email} , #{m_text} , sysdate)
 	</insert>
 	
 	<select id="maxNum_board" resultType="int">

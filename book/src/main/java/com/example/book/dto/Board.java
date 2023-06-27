@@ -7,6 +7,7 @@ import lombok.Setter;
 @Setter
 public class Board {
 	private int num; //번호
+	private String subject; //제목
 	private String pwd; //비밀번호
 	private String email; //이메일
 	private String m_text; //본문

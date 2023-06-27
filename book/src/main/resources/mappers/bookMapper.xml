@@ -32,6 +32,45 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	
+	<!-- board -->
+	
+	<select id="getLists_board" parameterMap="map" resultType="Board">
+	select * from (
+    select rownum rnum , data.* from (
+    select num ,subject, pwd , email , m_text , to_char(reg_date , 'YYYY.MM.DD') reg_date 
+    from board
+    where ${searchKey} like  '%' || #{searchValue} ||'%'
+    order by reg_date desc
+    )data
+	)
+	<![CDATA[	where rnum >= #{start} and rnum<= #{end}   ]]>
+
+	</select>
+	
+	<select id="getDataCount_board" parameterType="map" resultType="int">
+	select nvl(count(*) , 0)
+	from board
+	where ${searchKey} like '%' || #{searchValue} || '%'
+	</select>
+	
+	<select id="getReadData_board" parameterType="int" resultType="Board">
+	select num ,subject, pwd , email , m_text , to_char(reg_date , 'YYYY.MM.DD') reg_date 
+	from board
+	where num = #{num}
+	</select>
+	
+	<insert id="insertData_board" parameterType="Board">
+		insert into 
+		board 
+		values(#{num} , #{subject}, #{pwd} ,  #{email} , #{m_text} , sysdate)
+	</insert>
+	
+	<select id="maxNum_board" resultType="int">
+		select nvl(max(num) , 0)
+		from board
+	</select>
+	
+	
 
 </mapper>
 

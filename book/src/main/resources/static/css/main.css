@@ -94,11 +94,19 @@ body {
 	letter-spacing :0.7px;
 }
 
-.board_a {
-	margin-top: 20px;
+.a_box {
 	display: flex;
 	justify-content: center;
+}
+
+.board_a {
+	margin-top: 20px;
 	
+}
+
+
+.a_f {
+	margin-right: 20px;
 }
 
 .board_bt {
