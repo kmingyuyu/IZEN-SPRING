@@ -1,10 +1,75 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<th:block layout:fragment="css">
+<link rel="stylesheet" type="text/css" href="css/boardArticle.css"/>
+</th:block>
 
-</body>
+	<div layout:fragment="content" class="board_created">
+		<div class="created_hd">
+			<p>게시물</p>
+		</div>
+		<form action="/boardCreated" method="post" name="myForm" class="created_form" >
+	<div id="bbsCreated">
+		<div class="bbsCreated_bottomLine">
+			<dl>
+				<dt>제&nbsp;&nbsp;&nbsp;&nbsp;목</dt>
+				<dd>
+				<p th:text="${board.subject}"></p>
+				</dd>
+			</dl>		
+		</div>
+		<div class="bbsCreated_bottomLine">
+			<dl>
+				<dt>E-mail</dt>
+				<dd>
+				<p th:text="${board.email}"></p>
+				</dd>
+			</dl>		
+		</div>
+		
+		<div class="bbsCreated_bottomLine">
+			<dl>
+				<dt>작 성 일</dt>
+				<dd>
+				<p th:text="${board.reg_date}"></p>
+				</dd>
+			</dl>		
+		</div>
+		
+		
+		
+		
+		<div id="bbsCreated_content">
+			<dl>
+				<dt>문의 사항</dt>
+				<dd>
+				<p  th:text="${board.m_text}" ></p>
+				</dd>
+			</dl>
+		</div>
+		
+		
+	
+	</div>
+	<div style="display : flex; justify-content: end; ">
+	<div id="bbsCreated_footer" >
+		<input type="button" value=" 목록으로 " class="btn2"
+		 th:onclick="|location.href='boardList?@{${params}}'|" />
+	</div>
+	<div id="bbsCreated_footer" >
+		<input type="button" value=" 수 정 " class="btn2" 
+		th:onclick="|location.href='boardUpdate?num=@{${board.num}}&@{${params}}'|"/>
+	</div>
+	<div id="bbsCreated_footer" >
+		<input type="button" value=" 삭 제  " class="btn2"
+		 th:onclick="|location.href='delete?num=@{${board.num}}&@{${params}}'|"/>
+	</div>
+	
+	</div>
+	</form>	
+	</div>
+
+
 </html>

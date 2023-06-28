@@ -69,6 +69,7 @@ ul {
 
 
 .form_select {
+	cursor:pointer;
 	color: rgb(133, 133, 133);
 	border: none;
 	border-left: 1px solid  rgb(238, 238, 238);
@@ -91,6 +92,7 @@ ul {
 }
 
 .form_button{
+	cursor:pointer;
 	background-color:  rgb(192, 192, 192);
 	width: 80px;
 	border: none;

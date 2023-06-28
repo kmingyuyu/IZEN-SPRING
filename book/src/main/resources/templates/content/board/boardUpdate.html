@@ -1,10 +1,126 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<th:block layout:fragment="css">
+<link rel="stylesheet" type="text/css" href="css/boardCreated.css"/>
+</th:block>
+	<div layout:fragment="content" class="board_created">
+		<div class="created_hd">
+			<p>게시물 수정</p>
+		</div>
+		<form action="/boardUpdate_ok" method="post" name="myForm" class="created_form" >
+	<div id="bbsCreated">
+		<div class="bbsCreated_bottomLine">
+			<dl>
+				<dt>제&nbsp;&nbsp;&nbsp;&nbsp;목</dt>
+				<dd>
+				<input type="text" name="subject" size="60" 
+				maxlength="100" class="boxTF" placeholder="제목을 입력 해주세요" th:value="${board.subject}"/>
+				</dd>
+			</dl>		
+		</div>
+		
+		
+		
+		<div id="bbsCreated_content">
+			<dl>
+				<dt>문의 사항</dt>
+				<dd>
+				<textarea th:text="${board.m_text}" name="m_text" rows="50" cols="20" class="boxTA" placeholder="문의사항을 입력 해주세요" ></textarea>
+				</dd>
+			</dl>
+		</div>
+		
+		<div class="bbsCreated_bottomLine">
+			<dl>
+				<dt>E-Mail</dt>
+				<dd>
+				<input type="text" name="email" size="35" 
+				maxlength="50" class="boxTF" placeholder="이메일을 입력 해주세요" th:value="${board.email}"/>
+				</dd>
+			</dl>		
+		</div>
+		<div class="bbsCreated_noLine">
+			<dl>
+				<dt>패스워드</dt>
+				<dd>
+				<input type="password" name="pwd" size="35" 
+				maxlength="7" class="boxTF" placeholder="비밀번호를 입력 해주세요" th:value="${board.pwd}"/>
+				</dd>
+			</dl>		
+		</div>	
+		
+	
+	</div>
+	
+	<div id="bbsCreated_footer">
+	
+		<input type="hidden" name="num" th:value="${board.num}"/>
+		<input type="hidden" name="pageNum" th:value="${pageNum}"/>
+		<input type="hidden" name="searchKey" th:value="${searchKey}"/>
+		<input type="hidden" name="searchValue" th:value="${searchValue}"/>
+	
+		<input type="button" value=" 수정취소 " class="btn2" th:onclick="|location.href='boardList?@{${params}}'|" />
+		<input type="button" value=" 수정  " class="btn2" onclick="sendIt();" />
+	</div>
+	</form>	
+	</div>
+<th:block layout:fragment="script">
+	<script th:inline="javascript">
+	 	var errorMessage = [[${errorMessage}]];
+	 		
+	 	
+			if(errorMessage != null){
+			alert(errorMessage);
+		}; 
+	
+		function sendIt(){
+			var f= document.myForm; //폼 태그
+			var str = f.subject.value; // 제목에 입력된 값을 가져온다.
+			str = str.trim(); //공백을 없애주는 함수
+			
+			if(!str){
+				alert("제목을 입력 해주세요");
+				f.subject.focus();
+				return;
+			}
+			
+			str = f.m_text.value;
+			str = str.trim();
+			
+			if(!str){
+				alert("내용을 입력 해주세요");
+				f.m_text.focus();
+				return;
+			}
+			
+			
+			str = f.email.value;
+			str = str.trim();
+			
+			if(!str){
+				if(!str){
+					alert("정상적인 이메일을 입력해주세요");
+					f.email.focus();
+					return;
+				}
+			} 
+			
+			str = f.pwd.value;
+			str = str.trim();
+			
+			if(!str){
+				alert("패스워드를 입력 해주세요");
+				f.pwd.focus();
+				return;
+			}
+			
+				alert("게시물 수정이 완료 되었습니다");
+				f.submit();
+			
+			
+		}
+	</script>
+</th:block>
 </html>

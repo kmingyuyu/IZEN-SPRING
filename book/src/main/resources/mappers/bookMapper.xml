@@ -5,6 +5,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="com.example.book.dao.BookDao">
 
+	<!-- book  -->
+	
 	<select id="getLists" parameterType="map" resultType="Book">
 	select * from (
  	select rownum rnum , data.* from (
@@ -31,46 +33,59 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		where num = #{num}
 	</select>
 	
-	
 	<!-- board -->
 	
-	<select id="getLists_board" parameterMap="map" resultType="Board">
-	select * from (
-    select rownum rnum , data.* from (
-    select num ,subject, pwd , email , m_text , to_char(reg_date , 'YYYY.MM.DD') reg_date 
-    from board
-    where ${searchKey} like  '%' || #{searchValue} ||'%'
-    order by reg_date desc
-    )data
-	)
+	<select id="getLists_board" parameterType="map" resultType="Board">
+		select * from (
+		select rownum rnum , data.* from (
+		select num ,subject, pwd , email , m_text , to_char(reg_date , 'YYYY.MM.DD')
+		reg_date
+		from board
+		where ${searchKey} like '%' || #{searchValue} ||'%'
+		order by reg_date desc
+		)data
+		)
 	<![CDATA[	where rnum >= #{start} and rnum<= #{end}   ]]>
 
 	</select>
-	
-	<select id="getDataCount_board" parameterType="map" resultType="int">
-	select nvl(count(*) , 0)
-	from board
-	where ${searchKey} like '%' || #{searchValue} || '%'
+
+	<select id="getDataCount_board" parameterType="map"
+		resultType="int">
+		select nvl(count(*) , 0)
+		from board
+		where ${searchKey} like '%' || #{searchValue} || '%'
 	</select>
-	
-	<select id="getReadData_board" parameterType="int" resultType="Board">
-	select num ,subject, pwd , email , m_text , to_char(reg_date , 'YYYY.MM.DD') reg_date 
-	from board
-	where num = #{num}
+
+	<select id="getReadData_board" parameterType="int"
+		resultType="Board">
+		select num ,subject, pwd , email , m_text , to_char(reg_date , 'YYYY.MM.DD')
+		reg_date
+		from board
+		where num = #{num}
 	</select>
-	
+
 	<insert id="insertData_board" parameterType="Board">
-		insert into 
-		board 
-		values(#{num} , #{subject}, #{pwd} ,  #{email} , #{m_text} , sysdate)
+		insert into
+		board
+		values(#{num} , #{subject}, #{pwd} , #{email} , #{m_text} , sysdate)
 	</insert>
-	
+
 	<select id="maxNum_board" resultType="int">
 		select nvl(max(num) , 0)
 		from board
 	</select>
 	
-	
+	<update id="updateData_board" parameterType="Board">
+		update board
+		set subject=#{subject} , pwd=#{pwd} , email=#{email} , m_text=#{m_text} ,  reg_date= sysdate 
+		where num = #{num}
+	</update>
+
+	<delete id="deleteData_board" parameterType="int">
+		delete
+		board
+		where num = #{num}
+	</delete>
 
 </mapper>
 

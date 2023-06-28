@@ -1,1 +1,143 @@
 @charset "UTF-8";
+
+.board_created{
+	padding: 200px;
+	width: 600px;
+	margin:0 auto;
+}
+
+.created_hd {
+	
+}
+
+.created_hd p:nth-child(1){
+	color:#6f6f6f;
+	font-size:20px;
+	font-weight:bold;
+	border-left: 3px solid #4160A8;
+	padding-left: 5px;
+	margin-bottom: 15px;
+}
+
+
+#bbs_title {
+	width:574px;
+	padding-left:20px;
+	height:40px;
+	border:3px solid #D6D4A6;
+	text-align:left;
+	font-weight: bold;
+	line-height:40px;
+	font-size:10pt;
+	margin-bottom:30px;
+}
+
+#bbsCreated {
+	width:600px;
+	overflow: visible;
+	border-top:3px solid #DBDBDB;
+	border-bottom:3px solid #DBDBDB;
+	text-align:left;
+}
+
+.bbsCreated_bottomLine {
+	height:35px;
+	line-height:35px;
+	border-bottom:1px solid #DBDBDB;
+	clear:both;
+	text-align:left;
+}
+.bbsCreated_noLine {
+	height:35px;
+	line-height:35px;
+	clear:both;
+	text-align:left;
+}
+
+#bbsCreated_content {
+	height:170px;
+	line-height:170px;
+	border-bottom:1px solid #DBDBDB;
+	clear:both;
+	text-align:left;
+}
+
+#bbsCreated dt {
+	text-align: center;
+	color: rgb(155, 155, 155);
+	font-weight: bold;
+	float:left;
+	height:35px;
+	width:80px;
+	line-height:35px;
+	background-color:#EEEEEE;
+}
+#bbsCreated dd {
+	float:left;
+	height:30px;
+	width:440px;
+	line-height:35px;
+	text-align:left;
+	padding-left:10px;
+}
+
+#bbsCreated_content dt {
+	
+	text-align: center;
+	float:left;
+	height:170px;
+	width:80px;
+	background-color:#EEEEEE;
+}
+#bbsCreated_content dd {
+	float:left;
+	height:170px;
+	width:440px;
+	text-align:left;
+	padding-left:10px;
+}
+
+#bbsCreated_footer {
+	margin: 0 5px;
+	overflow: visible;
+	clear:both;
+	line-height:50px;
+	margin-top:3px;
+	text-align:center;
+}
+
+.btn2 {
+	border:none;
+	border-radius:5px;
+	cursor:pointer;
+	color:white;
+	background-color:#4160A8;
+	font-size:15px;
+	font-weight:bold;
+	padding: 7px 10px;
+}
+
+.boxTF {
+	outline: none;
+	border:none; 
+	height:15px; 
+	margin-top:7px; 
+	padding:2px 2px 2px 2px; 
+	border-color:#666666; 
+	background-color:#ffffff; 
+	font-family:"굴림"; 
+	font-size:9pt; 
+}
+
+.boxTA { 
+	resize: none;
+	outline: none;
+	border:none;
+	width: 400px;
+	height:150px; 
+	padding:10px 2px 2px 2px; 
+	border-color:#666666; 
+	background-color:#ffffff; 
+	font-family:"굴림"; 
+	font-size:9pt; 
+}

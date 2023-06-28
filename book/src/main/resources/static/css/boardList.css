@@ -6,6 +6,17 @@
 	margin:0 auto;
 }
 
+
+.created_hd p:nth-child(1){
+	color:#6f6f6f;
+	font-size:20px;
+	font-weight:bold;
+	border-left: 3px solid #4160A8;
+	padding-left: 5px;
+	margin-bottom: 15px;
+}
+
+
 #bbsList_title {
 	width:664px;  
 	padding-left:20px;
@@ -59,6 +70,8 @@
 	height:27px;
 	line-height:27px;
 	text-align:center;
+	font-size: 12px;
+	color: gray;
 }
 
 #bbsList_list #title {
@@ -75,22 +88,21 @@
 }
 
 #bbsList_list #title dt,#bbsList_list #title th {
+	font-size:15px;
 	float:left;
 	line-height:34px;
 	text-align:center;
 }
 
-#bbsList_list .num {width:50px;}
-#bbsList_list .subject {width:350px;}
-#bbsList_list .name {width:100px;}
-#bbsList_list .created {width:65px;}
+#bbsList_list .created {width:120px;}
+#bbsList_list .subject {width:180px; }
+#bbsList_list .m_text {width:290px;}
 
 #bbsList_list #lists {
 	clear:both;
 }
 
 #bbsList_list #lists dl, #bbsList_list #lists tr {
-	float:left;
 	border-bottom:1px solid #E4E4E4;
 }
 #bbsList_list #lists tr:last-child {
@@ -98,11 +110,25 @@
 }
 
 #bbsList_list dd.subject, #bbsList_list td.subject {
-	width:410px;
-	margin-left:10px;
-	text-align:left;
+	text-align: left !important;
+	font-size:12px;
+	width:180px;
 }
+
+#bbsList_list td.m_text {
+	text-align: left !important;
+	overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+	font-weight:bold;
+	width: 290px;
+}
+
+
 #bbsList_list a {
+	color:gray;
+	font-weight:bold;
+	font-size: 12px;
 	line-height: 27px;
 }
 
@@ -110,7 +136,7 @@
 	clear:both;
 	height:32px;
 	line-height:32px;
-	margin-top:5px;
+	margin-top:20px;
 	text-align:center;
 	float: none;
 }

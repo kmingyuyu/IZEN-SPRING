@@ -29,4 +29,8 @@ public interface BookDao {
 	
 	public int maxNum_board();
 	
+	public void updateData_board(Board board);
+	
+	public void deleteData_board(int num);
+	
 }

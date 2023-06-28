@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.book.dto.Board;
-import com.example.book.service.BoardService;
+import com.example.book.dto.Book;
+import com.example.book.service.BookService;
 import com.example.book.util.BookUtil;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -19,7 +20,7 @@ import jakarta.servlet.http.HttpServletRequest;
 @Controller
 public class BoardController {
 	@Autowired
-	private BoardService boardService;
+	private BookService bookService;
 	
 	@Autowired
 	private BookUtil bookUtil;
@@ -49,7 +50,7 @@ public class BoardController {
 			
 			}
 			
-			int dataCount = boardService.getDataCount_board(searchKey, searchValue);
+			int dataCount = bookService.getDataCount_board(searchKey, searchValue);
 			
 			int numPerPage = 5 ;
 			int totalPage = bookUtil.getPageCount(numPerPage, dataCount);
@@ -60,7 +61,7 @@ public class BoardController {
 			int start = (currentPage - 1) * numPerPage + 1 ; // 1 6 11 16 ...
 			int end = currentPage * numPerPage; // 5 10 15 20....
 			
-			List<Board> lists = boardService.getLists_board(searchKey, searchValue, start, end);
+			List<Board> lists = bookService.getLists_board(searchKey, searchValue, start, end);
 			
 			String param = "";
 			
@@ -108,12 +109,11 @@ public class BoardController {
 	public String createdOK(Board board , HttpServletRequest request , Model model ) {
 		
 		try {
-			int maxNum = boardService.maxNum_board();
+			int maxNum = bookService.maxNum_board();
 			
 			board.setNum(maxNum + 1); // nym컬럼에 들어갈 값을 1 증가시켜준다.
 			
-			boardService.insertData_board(board);
-			model.addAttribute("clearMessage", "게시글 작성이 완료 되었습니다");
+			bookService.insertData_board(board);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -128,5 +128,138 @@ public class BoardController {
 	
 
 	}
+	
+	@RequestMapping(value="/boardArticle" , method = {RequestMethod.GET,RequestMethod.POST})
+	public String article (HttpServletRequest request , Model model) {
+		
+		try {
+			int num = Integer.parseInt(request.getParameter("num"));
+			String pageNum = request.getParameter("pageNum");
+			String searchKey = request.getParameter("searchKey");
+			String searchValue = request.getParameter("searchValue");
+			
+			if(searchValue != null) {
+				searchValue = URLDecoder.decode(searchValue , "UTF-8");
+			}
+			
+			Board board = bookService.getReadData_board(num);
+			
+			if(board == null) {
+				return "redirect:/boardList?pageNum=" + pageNum;
+			}
+			
+			String param = "pageNum=" + pageNum;
+			
+			if(searchValue != null && !searchValue.equals("")) {
+//				searchValue에 검색어가 있다면
+				param += "&searchKey=" + searchKey;
+				param += "&searchValue=" + URLEncoder.encode(searchValue , "UTF-8"); //컴퓨터의 언어로 인코딩
+			}
+			
+			model.addAttribute("board" , board);
+			model.addAttribute("params" , param);
+			model.addAttribute("pageNum" , pageNum);
+			
+		} catch (Exception e) {
+		}
+		
+		return "content/board/boardArticle";
+	}
+	
+	@RequestMapping(value="/boardUpdate" , method = RequestMethod.GET)
+	public String update (HttpServletRequest request , Model model) {
+		
+		try {
+			int num = Integer.parseInt(request.getParameter("num"));
+			String pageNum = request.getParameter("pageNum");
+			String searchKey = request.getParameter("searchKey");
+			String searchValue = request.getParameter("searchValue");
+			
+			if(searchValue != null) {
+				searchValue = URLDecoder.decode(searchValue , "UTF-8");
+			}
+			
+			Board board = bookService.getReadData_board(num);
+			
+			if(board == null) {
+				return "redirect:/boardList?pageNum=" + pageNum;
+				
+			}
+			
+			String param = "pageNum=" + pageNum;
+			
+			if(searchValue != null && !searchValue.equals("")) {
+//				searchValue에 검색어가 있다면
+				param += "&searchKey=" + searchKey;
+				param += "&searchValue=" + URLEncoder.encode(searchValue , "UTF-8"); //컴퓨터의 언어로 인코딩
+			}
+			
+			model.addAttribute("board", board);
+			model.addAttribute("pageNum", pageNum);
+			model.addAttribute("params", param);
+			model.addAttribute("searchKey", searchKey);
+			model.addAttribute("searchValue", searchValue);
+			
+			
+			
+		} catch (Exception e) {
+		}
+		
+		return "content/board/boardUpdate";
+		
+	}
+	
+	@RequestMapping(value = "/boardUpdate_ok" , method= RequestMethod.POST)
+	public String updateOK(Board board , HttpServletRequest request ,  Model model ) {
+		String pageNum = request.getParameter("pageNum");
+		String searchKey = request.getParameter("searchKey");
+		String searchValue = request.getParameter("searchValue");
+		String param = "?pageNum=" + pageNum;
+		
+		try {
+			board.setM_text(board.getM_text().replaceAll("</br>", "\r\n"));
+			bookService.updateData_board(board);
+			
+			if(searchValue != null && !searchValue.equals("")) {
+//				searchValue에 검색어가 있다면
+				param += "&searchKey=" + searchKey;
+				param += "&searchValue=" + URLEncoder.encode(searchValue , "UTF-8"); //컴퓨터의 언어로 인코딩
+			}
+			
+		} catch (Exception e) {
+		}
+		
+		return "redirect:/boardList" + param;
+		
+	}
+	
+	@RequestMapping(value="/delete" , method=RequestMethod.GET)
+	public String delete(HttpServletRequest request , Model model) {
+		int num = Integer.parseInt(request.getParameter("num"));
+		String pageNum = request.getParameter("pageNum");
+		String searchKey = request.getParameter("searchKey");
+		String searchValue = request.getParameter("searchValue");
+		String param = "?pageNum=" + pageNum;
+		
+		try {
+			bookService.deleteData_board(num);
+			
+			if(searchValue != null && !searchValue.equals("")) {
+//				searchValue에 검색어가 있다면
+				param += "&searchKey=" + searchKey;
+				param += "&searchValue=" + URLEncoder.encode(searchValue , "UTF-8"); //컴퓨터의 언어로 인코딩
+			}
+			
+			
+		} catch (Exception e) {
+		}
+		
+		return "redirect:/boardList" + param;
+	}
+	
+	
+	
+	
+	
 }
 	

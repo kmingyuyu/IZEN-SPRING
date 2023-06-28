@@ -27,7 +27,7 @@
 			<dl>
 				<dt>문의 사항</dt>
 				<dd>
-				<textarea name="content" rows="50" cols="20" class="boxTA" placeholder="문의사항을 입력 해주세요"/></textarea>
+				<textarea name="m_text" rows="50" cols="20" class="boxTA" placeholder="문의사항을 입력 해주세요"/></textarea>
 				</dd>
 			</dl>
 		</div>
@@ -63,6 +63,7 @@
 	<script th:inline="javascript">
 	 	var errorMessage = [[${errorMessage}]];
 	 		
+	 	
 			if(errorMessage != null){
 			alert(errorMessage);
 		}; 
@@ -78,26 +79,26 @@
 				return;
 			}
 			
-			str = f.content.value;
+			str = f.m_text.value;
 			str = str.trim();
 			
 			if(!str){
 				alert("내용을 입력 해주세요");
-				f.content.focus();
+				f.m_text.focus();
 				return;
 			}
 			
 			
 			str = f.email.value;
 			str = str.trim();
-			/* 
+			
 			if(!str){
-				if(!isValidEmail(str)){
+				if(!str){
 					alert("정상적인 이메일을 입력해주세요");
 					f.email.focus();
 					return;
 				}
-			} */
+			} 
 			
 			str = f.pwd.value;
 			str = str.trim();
@@ -108,8 +109,9 @@
 				return;
 			}
 			
-			f.submit();
-		 	alert(clearMessage);
+				alert("문의글 작성이 완료 되었습니다");
+				f.submit();
+			
 			
 		}
 	</script>
