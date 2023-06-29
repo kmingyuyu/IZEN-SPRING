@@ -53,9 +53,10 @@
 		
 	
 	</div>
-	
+	<div style="display : flex; justify-content: end; ">
 	<div id="bbsCreated_footer">
 		<input type="button" value=" 등 록 " class="btn2" onclick="sendIt();" />
+	</div>
 	</div>
 	</form>	
 	</div>
@@ -109,8 +110,11 @@
 				return;
 			}
 			
-				alert("문의글 작성이 완료 되었습니다");
+				var l = confirm("문의글 작성 하시겠습니까?");
+				if( l ){
+				alert("작성 되었습니다");
 				f.submit();
+				}
 			
 			
 		}

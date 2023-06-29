@@ -31,22 +31,7 @@
 		
 	</div>	
 	
-	 <script th:inline="javascript">
-      function sendIt() {
-			var f = document.searchform;
-			
-			var str = f.searchValue.value;
-			str = str.trim();
-			
-			if(!str) {
-				alert("검색어를 입력 해주세요");
-				f.searchValue.focus();
-				return;
-			}
-			 f.submit();   
-		}	
-      
-      </script>
+
 	
 </body>
 </html>

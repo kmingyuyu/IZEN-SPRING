@@ -123,7 +123,7 @@ public class BoardController {
 			 
 		}
 		
-		return "redirect:/";
+		return "redirect:/boardList";
 	
 	
 

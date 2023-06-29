@@ -22,6 +22,24 @@
 	
 	<div th:replace="fragments/footer::footer"></div>
 	
+	
+	<script th:inline="javascript">
+      function sendIt_search() {
+			var f = document.searchform;
+			
+			var str = f.searchValue.value;
+			str = str.trim();
+			
+			if(!str) {
+				alert("검색어를 입력 해주세요");
+				f.searchValue.focus();
+				return;
+				
+			}
+			 f.submit();   
+		}	
+      
+      </script>
 	<!-- 각 페이지의 자바스크립트가 작성될 위치 -->
 	<th:block layout:fragment="script"></th:block>
 </body>

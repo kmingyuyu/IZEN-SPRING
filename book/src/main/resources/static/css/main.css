@@ -53,7 +53,7 @@ body {
 	border-left: 1px solid  rgb(238, 238, 238);
 	border-top-left-radius: 12px;
 	border-bottom-left-radius: 12px;
-	font-size: 17px;
+	font-size: 15px;
 	font-weight: bold;
 	padding: 10px 15px 10px 15px;
 	outline: none;
@@ -66,7 +66,7 @@ body {
 	border-left: none;
 	border-right: none;
 	width: 800px;
-	height: 20px;
+	height: 10px;
 	
 }
 
@@ -89,7 +89,7 @@ body {
 
 .form_label::placeholder {
 	color: rgb(133, 133, 133);
-	font-size: 17px;
+	font-size: 15px;
 	font-weight: bold;
 	letter-spacing :0.7px;
 }
@@ -115,7 +115,7 @@ body {
 	border-radius: 12px;
 	background-color:  rgb(255, 255, 255);
 	box-shadow: 3px 3px 3px 3px rgb(238, 238, 238);
-	color: silver;;
+	color: rgb(149, 149, 149);
 	font-size: 15px;
 	font-weight: bold;
 	padding: 10px;

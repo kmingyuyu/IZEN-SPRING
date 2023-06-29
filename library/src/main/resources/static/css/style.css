@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+a {
+	text-decoration:none !important; 
+}
+
+
+
 .form_header {
 	margin-left: 30px;
 	width: 500px;
@@ -43,5 +49,12 @@
 	background-repeat: no-repeat;	
 	background-size: 40%;
 	background-position: center;
+}
+
+.form_label::placeholder {
+	color: rgb(133, 133, 133);
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing :0.7px;
 }
 

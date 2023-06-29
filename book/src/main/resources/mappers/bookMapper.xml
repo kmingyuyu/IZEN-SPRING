@@ -38,7 +38,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="getLists_board" parameterType="map" resultType="Board">
 		select * from (
 		select rownum rnum , data.* from (
-		select num ,subject, pwd , email , m_text , to_char(reg_date , 'YYYY.MM.DD')
+		select num ,subject, pwd , email , m_text , to_char(reg_date , 'YYYY-MM-DD ')
 		reg_date
 		from board
 		where ${searchKey} like '%' || #{searchValue} ||'%'
@@ -58,8 +58,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<select id="getReadData_board" parameterType="int"
 		resultType="Board">
-		select num ,subject, pwd , email , m_text , to_char(reg_date , 'YYYY.MM.DD')
-		reg_date
+		select num ,subject, pwd , email , m_text , to_char(reg_date , 'YYYY-MM-DD HH:mm') reg_date
 		from board
 		where num = #{num}
 	</select>

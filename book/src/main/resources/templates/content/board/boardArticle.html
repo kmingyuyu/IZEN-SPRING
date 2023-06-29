@@ -64,12 +64,27 @@
 	</div>
 	<div id="bbsCreated_footer" >
 		<input type="button" value=" 삭 제  " class="btn2"
-		 th:onclick="|location.href='delete?num=@{${board.num}}&@{${params}}'|"/>
+		 th:onclick=sendIt_delete(); />
 	</div>
 	
 	</div>
 	</form>	
 	</div>
-
+	
+	
+	<th:block layout:fragment="script">
+	<script th:inline="javascript">
+      function sendIt_delete() {
+			var f = confirm("삭제 하시겠습니까?")
+			
+			if(f) {
+				alert("삭제 되었습니다");
+				window.location.href= "delete?num=[[${board.num}]]" + "&" + [[${params}]];
+			}
+		}	
+      </script>
+	</th:block>
+	
+	
 
 </html>

@@ -61,7 +61,7 @@
 		<input type="hidden" name="searchKey" th:value="${searchKey}"/>
 		<input type="hidden" name="searchValue" th:value="${searchValue}"/>
 	
-		<input type="button" value=" 수정취소 " class="btn2" th:onclick="|location.href='boardList?@{${params}}'|" />
+		<input type="button" value=" 수정취소 " class="btn2" th:onclick="notUpdate()" />
 		<input type="button" value=" 수정  " class="btn2" onclick="sendIt();" />
 	</div>
 	</form>	
@@ -74,7 +74,14 @@
 			if(errorMessage != null){
 			alert(errorMessage);
 		}; 
-	
+		
+		/* boardArticle?pageNum=1&num=11 */
+		
+		function notUpdate(){
+			alert("수정 취소 되었습니다");
+			window.location.href= "boardArticle?"+[[${params}]] + "&num=[[${board.num}]]";
+		}
+		
 		function sendIt(){
 			var f= document.myForm; //폼 태그
 			var str = f.subject.value; // 제목에 입력된 값을 가져온다.
@@ -115,9 +122,12 @@
 				f.pwd.focus();
 				return;
 			}
-			
+				var l = confirm("수정 하시겠습니까?")
+				if(l){
 				alert("게시물 수정이 완료 되었습니다");
 				f.submit();
+				}
+			
 			
 			
 		}
