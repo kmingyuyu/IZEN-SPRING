@@ -7082,3 +7082,284 @@ Caused by: java.lang.ClassNotFoundException: javax.persistence.Entity
 2023-06-29 18:14:47,692 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2023-06-29 18:14:47,692 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2023-06-29 18:14:47,695 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\library\src\test\resources
+2023-06-30 09:33:07,772 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-06-30 09:40:34,728 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 09:40:34,842 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 09:40:34,868 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 09:42:49,403 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 09:42:49,422 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 32 resources from src\main\resources to target\classes
+2023-06-30 09:42:49,442 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\book\src\test\resources
+2023-06-30 09:43:54,513 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 09:43:54,514 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 09:43:54,518 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\book\src\test\resources
+2023-06-30 09:45:35,557 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 09:45:35,558 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 09:45:35,562 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 09:45:36,668 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 09:45:36,669 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 09:45:36,673 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 10:15:47,437 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 10:15:47,488 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 10:15:47,510 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 10:15:52,267 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 10:15:52,322 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 10:15:52,343 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 10:17:03,529 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 10:17:03,570 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 10:17:03,591 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 10:36:05,464 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 10:36:05,504 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 10:36:05,527 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 10:36:25,528 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 10:36:25,569 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 10:36:25,593 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 10:37:36,669 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 10:37:36,672 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 10:37:36,674 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\book\src\test\resources
+2023-06-30 10:37:45,986 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 10:37:45,999 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 10:37:46,002 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\book\src\test\resources
+2023-06-30 10:47:40,273 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 10:47:40,274 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 10:47:40,277 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\book\src\test\resources
+2023-06-30 10:49:26,174 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 10:49:26,174 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 10:49:26,178 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\book\src\test\resources
+2023-06-30 10:52:46,284 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 10:52:46,285 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 10:52:46,289 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\book\src\test\resources
+2023-06-30 10:53:08,345 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 10:53:08,345 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 10:53:08,349 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\book\src\test\resources
+2023-06-30 12:03:35,729 [Worker-56: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:shopmax:0.0.1-SNAPSHOT @ C:\MINGYU SPRING\shopmax\pom.xml.
+2023-06-30 12:03:36,882 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 12:03:36,882 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 12:03:36,885 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 12:03:37,398 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.1.1/spring-boot-starter-validation-3.1.1-sources.jar
+2023-06-30 12:03:37,440 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-validation/3.1.1/spring-boot-starter-validation-3.1.1-sources.jar
+2023-06-30 12:03:37,443 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-validation:3.1.1
+2023-06-30 12:03:37,468 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/8.0.0.Final/hibernate-validator-8.0.0.Final-sources.jar
+2023-06-30 12:03:37,526 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/8.0.0.Final/hibernate-validator-8.0.0.Final-sources.jar
+2023-06-30 12:03:37,528 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.hibernate.validator:hibernate-validator:8.0.0.Final
+2023-06-30 12:03:37,671 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2-sources.jar
+2023-06-30 12:03:37,859 [Worker-58: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2-sources.jar
+2023-06-30 12:03:37,861 [Worker-58: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for jakarta.validation:jakarta.validation-api:3.0.2
+2023-06-30 12:03:54,424 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 12:03:54,439 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 12:03:54,442 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 12:04:00,017 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 12:04:00,021 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 12:04:00,024 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 12:32:40,509 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 12:32:40,519 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 12:32:40,741 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 12:38:16,132 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 12:38:16,132 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 12:38:16,136 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 12:38:19,595 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 12:38:19,606 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 12:38:19,625 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 14:59:20,564 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 14:59:20,564 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 14:59:20,569 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:01:34,531 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 15:01:34,566 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 15:01:34,589 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:07:12,319 [Worker-79: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:shopmax:0.0.1-SNAPSHOT @ C:\MINGYU SPRING\shopmax\pom.xml.
+2023-06-30 15:07:13,074 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:07:13,075 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:07:13,078 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:07:13,991 [Worker-84: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/thymeleaf/extras/thymeleaf-extras-springsecurity5/3.0.4.RELEASE/thymeleaf-extras-springsecurity5-3.0.4.RELEASE-sources.jar
+2023-06-30 15:07:14,299 [Worker-84: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/thymeleaf/extras/thymeleaf-extras-springsecurity5/3.0.4.RELEASE/thymeleaf-extras-springsecurity5-3.0.4.RELEASE-sources.jar
+2023-06-30 15:07:14,301 [Worker-84: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.thymeleaf.extras:thymeleaf-extras-springsecurity5:3.0.4.RELEASE
+2023-06-30 15:07:27,862 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:07:27,873 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:07:27,876 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:07:33,031 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:07:33,042 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:07:33,045 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:10:48,698 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:10:48,699 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:10:48,703 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:11:30,089 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:11:30,090 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:11:30,093 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:18:01,190 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:18:01,190 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:18:01,194 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:18:35,741 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 15:18:35,752 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 15:18:35,902 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:34:32,464 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:34:32,464 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:34:32,469 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:36:20,406 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:36:20,407 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:36:20,411 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:36:27,337 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:36:27,337 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:36:27,342 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:36:57,684 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606 [609])
+2023-06-30 15:36:57,694 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606
+2023-06-30 15:36:57,694 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\aether-connector-okhttp-0.17.8.jar
+2023-06-30 15:36:57,694 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\commons-lang3-3.8.1.jar
+2023-06-30 15:36:57,694 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\guice-4.2.2-no_aop.jar
+2023-06-30 15:36:57,695 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\jansi-2.4.0.jar
+2023-06-30 15:36:57,695 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-artifact-3.8.7.jar
+2023-06-30 15:36:57,695 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-builder-support-3.8.7.jar
+2023-06-30 15:36:57,695 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-compat-3.8.7.jar
+2023-06-30 15:36:57,695 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-core-3.8.7.jar
+2023-06-30 15:36:57,695 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-embedder-3.8.7.jar
+2023-06-30 15:36:57,696 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-model-3.8.7.jar
+2023-06-30 15:36:57,696 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-model-builder-3.8.7.jar
+2023-06-30 15:36:57,696 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-plugin-api-3.8.7.jar
+2023-06-30 15:36:57,696 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-repository-metadata-3.8.7.jar
+2023-06-30 15:36:57,696 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-api-1.6.3.jar
+2023-06-30 15:36:57,696 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-connector-basic-1.6.3.jar
+2023-06-30 15:36:57,697 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-impl-1.6.3.jar
+2023-06-30 15:36:57,697 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-provider-3.8.7.jar
+2023-06-30 15:36:57,697 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-spi-1.6.3.jar
+2023-06-30 15:36:57,697 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-transport-wagon-1.6.3.jar
+2023-06-30 15:36:57,697 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-util-1.6.3.jar
+2023-06-30 15:36:57,697 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-settings-3.8.7.jar
+2023-06-30 15:36:57,697 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-settings-builder-3.8.7.jar
+2023-06-30 15:36:57,698 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-shared-utils-3.3.4.jar
+2023-06-30 15:36:57,698 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\okhttp-3.14.1.jar
+2023-06-30 15:36:57,698 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\okio-1.17.3.jar
+2023-06-30 15:36:57,698 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\org.eclipse.sisu.inject-0.3.5.jar
+2023-06-30 15:36:57,698 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\org.eclipse.sisu.plexus-0.3.5.jar
+2023-06-30 15:36:57,698 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-build-api-0.0.7.jar
+2023-06-30 15:36:57,698 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-cipher-2.0.jar
+2023-06-30 15:36:57,699 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-classworlds-2.6.0.jar
+2023-06-30 15:36:57,699 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-component-annotations-2.1.0.jar
+2023-06-30 15:36:57,699 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-interpolation-1.26.jar
+2023-06-30 15:36:57,699 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-sec-dispatcher-2.0.jar
+2023-06-30 15:36:57,699 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-utils-3.3.1.jar
+2023-06-30 15:36:57,699 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\wagon-file-3.5.3.jar
+2023-06-30 15:36:57,699 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\wagon-provider-api-3.5.3.jar
+2023-06-30 15:36:57,700 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_31.1.0.jre [11])
+2023-06-30 15:36:57,701 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\com.google.guava_31.1.0.jre.jar
+2023-06-30 15:36:57,701 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_1.7.36 [923])
+2023-06-30 15:36:57,702 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\slf4j.api_1.7.36.jar
+2023-06-30 15:36:57,702 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20220405-0441 [35])
+2023-06-30 15:36:57,703 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\javax.inject_1.0.0.v20220405-0441.jar
+2023-06-30 15:36:57,703 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20221203-1659 [33])
+2023-06-30 15:36:57,838 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\javax.annotation_1.3.5.v20221203-1659.jar
+2023-06-30 15:36:57,838 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.4.0.v20221112-0806 [67])
+2023-06-30 15:36:57,846 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\org.apache.commons.cli_1.4.0.v20221112-0806.jar
+2023-06-30 15:36:57,846 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.1 [13])
+2023-06-30 15:36:57,894 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\EZEN-11\.p2\pool\plugins\com.google.guava.failureaccess_1.0.1.jar
+2023-06-30 15:36:57,898 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\MINGYU SPRING\shopmax":
+2023-06-30 15:36:57,899 [Worker-95: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean
+2023-06-30 15:37:26,484 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:37:26,486 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:37:26,488 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:37:36,982 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:37:36,985 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:37:36,987 [Worker-95: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:38:04,843 [Worker-92: Launching Executing install in C__MINGYU SPRING_shopmax] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\MINGYU SPRING\shopmax":
+2023-06-30 15:38:04,843 [Worker-92: Launching Executing install in C__MINGYU SPRING_shopmax] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-06-30 15:40:31,349 [Worker-94: Launching Executing install in C__MINGYU SPRING_shopmax] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\MINGYU SPRING\shopmax":
+2023-06-30 15:40:31,349 [Worker-94: Launching Executing install in C__MINGYU SPRING_shopmax] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-06-30 15:40:31,761 [Worker-96: Launching Executing install in C__MINGYU SPRING_shopmax] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\MINGYU SPRING\shopmax":
+2023-06-30 15:40:31,761 [Worker-96: Launching Executing install in C__MINGYU SPRING_shopmax] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-06-30 15:40:53,452 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:40:53,455 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:40:53,457 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:40:59,593 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:40:59,597 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:40:59,600 [Worker-93: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:42:53,661 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 15:42:53,689 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 15:42:53,710 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:43:09,309 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 15:43:09,355 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 15:43:09,376 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:45:10,939 [Worker-99: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:shopmax:0.0.1-SNAPSHOT @ C:\MINGYU SPRING\shopmax\pom.xml.
+2023-06-30 15:45:11,782 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:45:11,782 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:45:11,784 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:45:12,754 [Worker-99: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/thymeleaf/extras/thymeleaf-extras-springsecurity6/3.1.1.RELEASE/thymeleaf-extras-springsecurity6-3.1.1.RELEASE-sources.jar
+2023-06-30 15:45:13,464 [Worker-99: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/thymeleaf/extras/thymeleaf-extras-springsecurity6/3.1.1.RELEASE/thymeleaf-extras-springsecurity6-3.1.1.RELEASE-sources.jar
+2023-06-30 15:45:13,466 [Worker-99: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.1.RELEASE
+2023-06-30 15:45:33,250 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:45:33,263 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:45:33,265 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:45:50,702 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:45:50,705 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:45:50,707 [Worker-103: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:50:58,122 [Worker-106: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\MINGYU SPRING\shopmax":
+2023-06-30 15:50:58,122 [Worker-106: Launching Executing clean in C__MINGYU SPRING_shopmax] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean
+2023-06-30 15:51:04,514 [Worker-72: Launching Executing install in C__MINGYU SPRING_shopmax] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\MINGYU SPRING\shopmax":
+2023-06-30 15:51:04,514 [Worker-72: Launching Executing install in C__MINGYU SPRING_shopmax] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always install
+2023-06-30 15:53:22,379 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 15:53:22,391 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 15:53:22,412 [Worker-108: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:53:23,565 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 15:53:23,627 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 15:53:23,665 [Worker-72: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 15:55:37,394 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 15:55:37,394 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 15:55:37,397 [Worker-97: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 16:00:47,548 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 16:00:47,548 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 16:00:47,552 [Worker-111: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 16:02:01,701 [Worker-112: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 16:02:01,701 [Worker-112: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 16:02:01,706 [Worker-112: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 16:06:08,009 [Worker-112: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 16:06:08,009 [Worker-112: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 16:06:08,013 [Worker-112: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 16:22:23,669 [Worker-118: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 16:22:23,685 [Worker-118: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 16:22:23,711 [Worker-118: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 16:30:28,302 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 16:30:28,318 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 16:30:28,340 [Worker-129: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 17:54:06,025 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 17:54:06,040 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 17:54:06,060 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 17:55:30,460 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 17:55:30,473 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 17:55:30,491 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:03:03,218 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 18:03:03,229 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 18:03:03,267 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:03:36,122 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 18:03:36,125 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 18:03:36,128 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:03:41,736 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-06-30 18:03:41,740 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-06-30 18:03:41,744 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:06:28,952 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 18:06:28,964 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 18:06:28,983 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:06:35,234 [Worker-160: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 18:06:35,246 [Worker-160: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 18:06:35,265 [Worker-160: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:07:09,423 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 18:07:09,434 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 18:07:09,453 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:10:24,177 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 18:10:24,189 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 18:10:24,208 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:12:30,178 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 18:12:30,191 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 18:12:30,210 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:13:54,033 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 18:13:54,044 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 18:13:54,062 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:14:07,543 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 18:14:07,554 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 18:14:07,572 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:16:18,671 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 18:16:18,682 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 18:16:18,715 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:16:32,121 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 18:16:32,132 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 18:16:32,159 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:16:52,899 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 18:16:52,910 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
+2023-06-30 18:16:52,931 [Worker-151: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-06-30 18:17:21,653 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
+2023-06-30 18:17:21,666 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 70 resources from src\main\resources to target\classes
