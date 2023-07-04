@@ -12,7 +12,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-public class Item {
+public class Item extends BaseEntity {
 //	jpa는 db 데이터입력시 객체의 이름에서 대문자를 인식해서 들어간다 itemNm -> db컬럼명 : item_nm
 	
 	@Id
@@ -35,10 +35,7 @@ public class Item {
 	
 	@Enumerated(EnumType.STRING) //enum의 이름을 db에 저장
 	private ItemSellStatus itemSellStatus;// 판매상태 : SELL 혹은 SOLD OUT
-	
-	private LocalDateTime regTime; //등록시간
-	
-	private LocalDateTime updateTime; //수정시간
+
 	
 	
 	

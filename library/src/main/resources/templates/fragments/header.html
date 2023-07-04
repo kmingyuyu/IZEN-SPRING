@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">	
 
 
 
@@ -20,8 +20,8 @@
 				</div>
 			</div>
 			<div>
-				<a href="/">고객 센터</a>
-				<a href="/">오시는 길</a>
+				<a href="/" class="main_a_txt me-3">고객 센터</a>
+				<a href="/" class="main_a_txt">오시는 길</a>
 			</div>
 			
 		</div>
@@ -29,30 +29,13 @@
 	<!-- Close Top Nav -->
 
 
-	<!-- Header -->
 	<nav class="navbar navbar-expand-lg navbar-light shadow">
 		<div
 			class="container d-flex justify-content-between align-items-center">
 
 			<a class="navbar-brand text-success logo h1 align-self-center"
-				href="main.html"> <img alt="로고" src="/img/MOOK.png" width="100">
+				href="/"> <img alt="로고" src="/img/MOOK.png" width="100">
 			</a>
-			<form action="" method="post" name="searchform"
-				class="form_header">
-				<select name="searchKey" class="form_select">
-					<option value="subject">제목</option>
-					<option value="writer">작가</option>
-					<option value="type">장르</option>
-					<option value="publisher">출판사</option>
-				</select> <input type="text" name="searchValue" class="form_label"
-					placeholder="검색어를 입력 해주세요" maxlength="20" /> <input type="button"
-					class="form_button" onclick="sendIt();" value="" />
-					
-					<!-- <i class="fa-solid fa-magnifying-glass" style="color: #c0c0c0;"></i> 돋보기  -->
-
-			</form>
-
-
 
 
 			<button class="navbar-toggler border-0" type="button"
@@ -77,19 +60,27 @@
 							</div>
 						</div>
 					</div>
-					<a class="nav-icon position-relative text-decoration-none" href="#">
-						<i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i> <span
-						class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-					</a> <a class="nav-icon position-relative text-decoration-none"
-						href="#"> <i class="fa fa-fw fa-user text-dark mr-3"></i> <span
-						class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+					<a class="me-3 position-relative text-decoration-none main_a_txt" 
+					href="member/login" sec:authorize="isAnonymous()">
+						<span>로그인</span> 
+					</a>
+					 <a class=" position-relative text-decoration-none main_a_txt"
+						href="/member/new" sec:authorize="isAnonymous()"> 
+						<span>회원가입</span> 
+					</a>
+					 <a class="me-3 position-relative text-decoration-none main_a_txt"
+						href="/member/logout" sec:authorize="isAuthenticated()"> 
+						<span>로그아웃</span> 
+					</a>
+					 <a class=" position-relative text-decoration-none main_a_txt"
+						href="/member/mypage" sec:authorize="isAuthenticated()"> 
+						<span>마이 페이지</span> 
 					</a>
 				</div>
 			</div>
 
 		</div>
 	</nav>
-	<!-- Close Header -->
 
 	<!-- Modal -->
 	<div class="modal fade bg-white" id="templatemo_search" tabindex="-1"
