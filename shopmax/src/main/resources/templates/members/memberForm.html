@@ -79,6 +79,8 @@
 
 </div>
 <th:block layout:fragment="script">
+	
+	
 	<script th:inline="javascript">
 		//회원 가입이 실패했을때
 		var errorMessage = [[${errorMessage}]];
@@ -86,7 +88,10 @@
 		if(errorMessage != null) {
 			alert(errorMessage);
 		}
+
+		
 		
 	</script>
+	
 </th:block>
 </html>

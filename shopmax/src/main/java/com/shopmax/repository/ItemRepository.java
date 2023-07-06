@@ -11,8 +11,9 @@ import org.springframework.data.repository.query.Param;
 import com.shopmax.constant.ItemSellStatus;
 import com.shopmax.entity.Item;
 
-//                                                   <해당 repository에 사용할 Entity , Entity클래스의 기본키(primary key) 타입>
-public interface ItemRepository extends JpaRepository<Item, Long> {
+//           JpaRepository<Item, Long> : <해당 repository에 사용할 Entity , Entity클래스의 기본키(primary key) 타입>
+public interface ItemRepository extends JpaRepository<Item, Long> , ItemRepositoryCustom {
+	
 //	select * from item where item_nm = ?
 	List<Item> findByItemNm(String itemNm);
 	

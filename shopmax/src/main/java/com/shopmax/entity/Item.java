@@ -3,6 +3,7 @@ package com.shopmax.entity;
 import java.time.LocalDateTime;
 
 import com.shopmax.constant.ItemSellStatus;
+import com.shopmax.dto.ItemFormDto;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -30,12 +31,23 @@ public class Item extends BaseEntity {
 	private Integer stockNumber; // 재고수량 
 	
 	@Lob //clob과 같은 큰타입의 문자타입으로 컬럼을 만듦
-	@Column(nullable = false)
+	@Column(nullable = false , columnDefinition = "Longtext")
 	private String itemDetail; // 상품상세설명
 	
 	@Enumerated(EnumType.STRING) //enum의 이름을 db에 저장
 	private ItemSellStatus itemSellStatus;// 판매상태 : SELL 혹은 SOLD OUT
-
+	
+//	item 엔티티 수정
+	public void updateItem(ItemFormDto itemFormDto) {
+		
+		this.itemNm = itemFormDto.getItemNm();
+		this.price = itemFormDto.getPrice();
+		this.stockNumber = itemFormDto.getStockNumber();
+		this.itemDetail = itemFormDto.getItemDetail();
+		this.itemSellStatus = itemFormDto.getItemSellStatus();
+		
+	}
+	
 	
 	
 	

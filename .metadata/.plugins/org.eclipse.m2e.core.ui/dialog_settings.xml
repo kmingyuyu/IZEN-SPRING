@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\shopmax"/>
 			<item value="C:\MINGYU SPRING\board2"/>
 			<item value="C:\MINGYU SPRING\book\src\main\resources\templates\content\book\bookMain.html"/>
 			<item value="C:\MINGYU SPRING\shopmax"/>
