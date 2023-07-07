@@ -36,6 +36,16 @@ public class MemberController {
 		return "member/memberNew";
 	}
 	
+	@GetMapping(value="/member/new1")
+	public String memberNew1(Model model) {
+		return "member/new/memberNew1";
+	}
+	
+	
+	
+	
+	
+	
 //	회원가입 진행
 	@PostMapping(value="/member/new")
 	public String memberOk(@Valid MemberDto memberDto , BindingResult bindingResult , Model model) {

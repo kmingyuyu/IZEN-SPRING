@@ -41,7 +41,7 @@ public class ItemImgService {
 			
 			imgName = fileService.uploadFile(itemImgLocation , oriImgName , itemImgFile.getBytes());
 			
-			imgUrl = "/images/item" + imgName ;
+			imgUrl = "/images/item/" + imgName ;
 		}
 		
 //		2.item_img 테이블에 저장  

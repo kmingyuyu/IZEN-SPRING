@@ -52,7 +52,44 @@ public class Order {
 	        // mappedBy:연관 관계의 주인 설정(외래키 지정)
 	private List<OrderItem> orderItems = new ArrayList<>();
 	
-
+	public void addOrderItem(OrderItem orderItem) {
+		
+		this.orderItems.add(orderItem);
+		orderItem.setOrder(this); // !양방향 참조관계 일때는 orderItem객체에도 order객체를 세팅한다.
+		
+	}
+	
+//	order 객체를 생성 해준다.
+	public static Order createOrder(Member member , List<OrderItem> orderItemList) {
+		
+		Order order = new Order();
+		order.setMember(member);
+		
+		for(OrderItem orderItem : orderItemList) {
+			order.addOrderItem(orderItem);
+		}
+		
+		order.setOrderStatus(OrderStatus.ORDER);
+		order.setOrderDate(LocalDateTime.now());
+		
+		return order;
+		
+	}
+	
+//	총 주문 금액
+	public int getTotalPrice() {
+		
+		int totalPirce = 0;
+		
+		for(OrderItem orderItem : orderItems) {
+			totalPirce += orderItem.getTotalPrice();
+		}
+		
+		return totalPirce;
+		
+	}
+	
+	
 	
 	
 }

@@ -38,6 +38,23 @@ public class OrderItem extends BaseEntity {
 	@JoinColumn(name="order_id")
 	private Order order;
 	
+//	주문할 상품하고 주문 수량을 통해서 orderItem 객체를 만듬
+	public static OrderItem createOrderItem(Item item , int count) {
+		
+		OrderItem orderItem = new OrderItem();
+		orderItem.setItem(item);
+		orderItem.setCount(count);
+		orderItem.setOrderPrice(item.getPrice());
+		
+		item.removeStock(count);
+		
+		return orderItem;
+		
+	}
+	
+	public int getTotalPrice() {
+		return orderPrice * count;
+	}
 	
 	
 	

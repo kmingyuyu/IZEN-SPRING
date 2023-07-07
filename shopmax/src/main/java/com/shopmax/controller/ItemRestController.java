@@ -20,6 +20,16 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ItemRestController {
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
 	private final ItemService itemService;
 
 	@GetMapping(value={ "/admin/items" , "/admin/items/{page}" } )
@@ -37,7 +47,7 @@ public class ItemRestController {
 		return items;
 	}
 	
-	
+	*/
 	
 	
 }
