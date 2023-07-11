@@ -1,23 +1,13 @@
 package com.shopmax.entity;
 
-import groovy.transform.ToString;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
-@ToString
-@Getter
-@Setter
 @Table(name="cart")
+@Setter
+@Getter
+@ToString
 public class Cart {
 	
 	@Id
@@ -28,6 +18,4 @@ public class Cart {
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="member_id")
 	private Member member;
-	
-	
 }

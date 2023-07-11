@@ -6,9 +6,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-@Setter
+@Setter 
 public class MainItemDto {
-	
 	private Long id;
 	
 	private String itemNm;
@@ -19,10 +18,9 @@ public class MainItemDto {
 	
 	private Integer price;
 	
-	@QueryProjection // 쿼리 dsl로 결과 조회 할때 MainItemDto 로 객체로 바로 받아올수 있다.
-	public MainItemDto
-	(Long id , String itemNm , String itemDetail , 
-	String imgUrl , Integer price) {
+	@QueryProjection //쿼리dsl로 결과 조회 할때 MainItemDto 객체로 바로 받아올 수 있다.
+	public MainItemDto(Long id, String itemNm, String itemDetail, 
+			String imgUrl, Integer price) {
 		this.id = id;
 		this.itemNm = itemNm;
 		this.itemDetail = itemDetail;
@@ -30,6 +28,5 @@ public class MainItemDto {
 		this.price = price;
 	}
 	
-	
-	
 }
+

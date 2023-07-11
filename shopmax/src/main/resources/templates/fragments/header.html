@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">	
-	
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
     <div class="site-navbar bg-white py-2" th:fragment="header">
 
       <div class="search-wrap">
         <div class="container">
           <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
           <form th:action="@{/item/shop}" method="post">
-            <input type="text" name="searchQuery" class="form-control" placeholder="search...">
+            <input type="text" name="searchQuery" class="form-control" placeholder="상품검색이 가능합니다.">
           </form>  
         </div>
       </div>
@@ -26,14 +26,14 @@
                 <li class="has-children active" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
                   <a>관리자 메뉴</a>
                   <ul class="dropdown">
-                    <li><a href="/admin/item/new">상품 등록</a></li>
-                    <li><a href="/admin/items">상품 관리</a></li>
+                    <li><a href="/admin/item/new">상품등록</a></li>
+                    <li><a href="/admin/items">상품관리</a></li>
                   </ul>
                 </li>
                 
-                <li><a href="/item/shop">전체 상품</a></li>
-                <li><a href="/members/qa">문의 하기</a></li>
-                <li><a href="/orders" sec:authorize="isAuthenticated()">구매 이력</a></li>
+                <li><a href="/item/shop">전체상품</a></li>
+                <li><a href="/members/qa">문의하기</a></li>
+                <li><a href="/orders" sec:authorize="isAuthenticated()">구매이력</a></li>
                 <li><a href="/members/login" sec:authorize="isAnonymous()">로그인</a></li>
                 <li><a href="/members/logout" sec:authorize="isAuthenticated()">로그아웃</a></li>
               </ul>
@@ -51,4 +51,5 @@
         </div>
       </div>
     </div>
+    
 </html>

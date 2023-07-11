@@ -29,5 +29,3 @@ function getCookie(cookie_name) {
         }
     }
 }
-
- 

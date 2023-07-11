@@ -9,20 +9,20 @@ import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
 import lombok.*;
 
+@EntityListeners(value = {AuditingEntityListener.class})
+@MappedSuperclass
 @Getter
 @Setter
-@MappedSuperclass
-@EntityListeners(value = {AuditingEntityListener.class})
 public abstract class BaseEntity extends BaseTimeEntity {
-	
 	
 	@CreatedBy
 	@Column(updatable = false)
-	private String createdBy; // 등록자
+	private String createdBy; //등록자
 	
 	@LastModifiedBy
 	private String modifiedBy; //수정자
-	
-	
-	
 }
+
+
+
+
