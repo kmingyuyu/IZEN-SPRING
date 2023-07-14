@@ -7,4 +7,6 @@ import com.example.library.entity.Member;
 public interface MemberRepository extends JpaRepository<Member, Long> {
 	
 	Member findByEmail(String email);
+	
+	Member findByPhoneNumber(String phoneNumber);
 }

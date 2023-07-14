@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=C\:\\MINGYU SPRING\\.git;C\:\\shopmax\\.git;
-GitRepositoriesView.GitDirectories.relative=.git;C\:\\shopmax\\.git;
+GitRepositoriesView.GitDirectories=C\:\\MINGYU SPRING\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

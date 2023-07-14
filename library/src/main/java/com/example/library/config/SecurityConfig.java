@@ -20,7 +20,7 @@ public class SecurityConfig {
 		http.authorizeHttpRequests(authorize -> authorize
 				.requestMatchers("/css/**","/js/**","/img/**","/images/**","/webfonts/**").permitAll() 
 				.requestMatchers("/","/member/**","/book/**").permitAll()
-				.requestMatchers("/favicon.ico","/error").permitAll()
+				.requestMatchers("/favicon.ico","/error" , "/phoneCheck").permitAll()
 				.requestMatchers("/admin/**").hasRole("ADMIN")
 				
 				.anyRequest().authenticated()

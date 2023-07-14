@@ -10,7 +10,7 @@ a:hover {
 
 
 .main_a_txt {
-	color: white;
+	color: white !important;
 	font-size: 12px;
 }
 

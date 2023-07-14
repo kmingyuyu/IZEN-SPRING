@@ -38,6 +38,12 @@ public class Member {
 	@Column(nullable = false)
 	private String phoneNumber; //핸드폰 번호
 	
+	@Column(nullable = false)
+	private String name;
+	
+	@Column(nullable = false)
+	private String birth;
+	
 	@Enumerated(EnumType.STRING)
 	private Role role; // 역활 (관리자 , 사용자)
 	
@@ -50,6 +56,8 @@ public class Member {
 		member.setEmail(memberDto.getEmail());
 		member.setPassword(password);
 		member.setPhoneNumber(memberDto.getPhoneNumber());
+		member.setName(memberDto.getName());
+		member.setBirth(memberDto.getBirth());
 //		member.setRole(Role.USER);
 		member.setRole(Role.ADMIN);
 		

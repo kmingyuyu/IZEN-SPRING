@@ -13,9 +13,12 @@
 		id="templatemo_nav_top">
 		<div class="container text-light">
 			<div class="d-flex justify-content-start">
-				<div>
-					<a class="text-light" href="https://github.com/kmingyuyu" target="_blank" rel="sponsored">
-					<i class="fa-brands fa-github"></i></a> 
+				<div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+				     id="templatemo_main_nav" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+					
+					<span class="main_a_txt me-3">[ 관리자 모드 ]</span>
+					<a href="/admin/book/new" class="main_a_txt me-3">책 등록</a>
+					<a href="/admin/books" class="main_a_txt me-3">책 관리</a>
 					
 				</div>
 			</div>
