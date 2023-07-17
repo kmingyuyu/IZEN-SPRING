@@ -2,6 +2,10 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\gitExam\gitExam"/>
+			<item value="C:\gitExam\gitExam\gitExam"/>
+			<item value="C:\gitExam"/>
+			<item value="C:\test\gitExam"/>
 			<item value="C:\MINGYU SPRING\book"/>
 			<item value="C:\MINGYU SPRING\gitTest"/>
 			<item value="C:\MINGYU SPRING\library"/>
@@ -13,8 +17,6 @@
 			<item value="C:\Users\82107\Desktop\수업\IZEN.SPRING\book"/>
 			<item value="C:\MINGYU SPRING\portfolio"/>
 			<item value="C:\MINGYU SPRING\spring-board"/>
-			<item value="C:\MINGYU SPRING\spring-quiz"/>
-			<item value="C:\MINGYU SPRING\spring-project"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

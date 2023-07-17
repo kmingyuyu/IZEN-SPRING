@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=C\:\\MINGYU SPRING\\.git;
-GitRepositoriesView.GitDirectories.relative=.git;
+GitRepositoriesView.GitDirectories=C\:\\MINGYU SPRING\\.git;C\:\\gitExam\\gitExam\\.git;C\:\\gitExam\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;C\:\\gitExam\\gitExam\\.git;C\:\\gitExam\\.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

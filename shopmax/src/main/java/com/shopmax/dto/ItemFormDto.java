@@ -14,6 +14,8 @@ import lombok.*;
 @Getter
 @Setter
 public class ItemFormDto {
+	
+	
 	private Long id;
 	
 	@NotBlank(message = "상품명은 필수 입력입니다.")
