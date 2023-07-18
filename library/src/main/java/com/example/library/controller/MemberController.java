@@ -79,7 +79,7 @@ public class MemberController {
 		
 		int randomNumber = (int)((Math.random()* (9999 - 1000 + 1)) + 1000);//난수 생성
 		
-		memberService.checkPhone(phoneNumber , randomNumber );
+		memberService.checkPhone(phoneNumber , randomNumber);
 		
 		return  Integer.toString(randomNumber);
 	}

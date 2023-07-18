@@ -2,12 +2,15 @@ package com.example.library.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.example.library.constant.ImgChoiceOk;
 import com.example.library.dto.BookFormDto;
+import com.example.library.dto.BookSearchDto;
 import com.example.library.entity.Book;
 import com.example.library.entity.BookImg;
 import com.example.library.repository.BookImgRepository;
@@ -54,15 +57,22 @@ public class BookService {
 			bookImgService.saveBookImg(bookImg, bookImgFileList.get(i));
 		}
 		
-		
-		
-		
-		
 		return book.getId();
-		
-		
-		
 	}
+	
+	
+	
+	
+	
+	
+	@Transactional(readOnly = true)
+	public Page<Book> getAdminBookPage(BookSearchDto bookSearchDto , Pageable pageable){
+		Page<Book> bookPage = bookRepository.getAdminBookPage(bookSearchDto, pageable);
+		return bookPage;
+	}
+	
+	
+	
 	
 	
 	

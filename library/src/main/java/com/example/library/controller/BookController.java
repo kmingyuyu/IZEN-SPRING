@@ -1,16 +1,23 @@
 package com.example.library.controller;
 
 import java.util.List;
+import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.example.library.dto.BookFormDto;
+import com.example.library.dto.BookSearchDto;
+import com.example.library.entity.Book;
 import com.example.library.service.BookService;
 
 import jakarta.validation.Valid;
@@ -31,6 +38,7 @@ public class BookController {
 		return "book/bookForm";
 	}
 	
+//	상품 등록 기능
 	@PostMapping(value="/admin/book/new")
 	public String bookNew
 	(@Valid BookFormDto bookFormDto , BindingResult bindingResult , 
@@ -57,6 +65,21 @@ public class BookController {
 		return "redirect:/";
 	}
 	
+//	상품관리 페이지
+	@GetMapping(value = {"/admin/books" , "/admin/books/{page}"})
+	public String bookManage(BookSearchDto bookSearchDto ,  @PathVariable("page") Optional<Integer> page , Model model) {
+		
+		
+		Pageable pageable = PageRequest.of(page.isPresent() ?  page.get() : 0 , 3);
+		
+		Page<Book> books = bookService.getAdminBookPage(bookSearchDto, pageable);
+		
+		model.addAttribute("books" , books);
+		model.addAttribute("bookSearchDto" , bookSearchDto);
+		model.addAttribute("maxPage" , 5);
+		
+		return "/book/bookMng";
+	}
 	
 	
 	
