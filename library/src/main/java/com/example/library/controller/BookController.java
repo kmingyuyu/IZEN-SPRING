@@ -67,31 +67,7 @@ public class BookController {
 		return "redirect:/";
 	}
 	
-	@GetMapping(value="/admin/books")
-	public String saveBook(Model model) {
-		
-		String result = "";
-		
-		String api_key = "ttbskyjangking1653001";
-		
-		try {
-			URL url = new URL("http://www.aladin.co.kr/ttb/api/ItemList.aspx?"
-					+ "ttbkey=" + api_key 
-					+ "&QueryType=ItemNewAll"
-					+ "&MaxResults=100"
-					+ "&start=1"
-					+ "&SearchTarget=Book"
-					+ "&output=js"
-					+ "&Version=20131101"
-					);
-		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return api_key;
-		
-		}
-	
+
 	
 	
 //	상품관리 페이지

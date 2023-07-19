@@ -10,9 +10,18 @@
 		
 	</th:block>
 	
-	 <section class="pb-5">
-	 <div class ="main_box">
+	 <section class="pb-5 main_box">
+	 <div class ="main_box_in2">
         	<img class="main_img" alt="메인 이미지" src="img/library_3.jpg">
+	 </div>
+	 <div class="main_box_in1">
+	 <form action="" method="post" name="searchform" class="form">	
+      <input type="text" name="searchValue" class="form_label" placeholder="검색어를 입력 해주세요." maxlength="20"/>
+      <input type="button" class="form_button" onclick="sendIt_search();"/>
+    </form>
+    	<div class="main_box_in3">
+      <input type="button" class="detail_button" value="상세검색"/>		
+    	</div>
 	 </div>
     </section>
 	

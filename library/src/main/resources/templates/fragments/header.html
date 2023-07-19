@@ -2,41 +2,31 @@
 <html xmlns:th="http://www.thymeleaf.org"
 	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">	
 
-
-
-
-
 <header th:fragment="header">
 	<!-- Start Top Nav -->
 	<nav
 		class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block"
-		id="templatemo_nav_top">
+		 sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
 		<div class="container text-light">
 			<div class="d-flex justify-content-start">
-				<div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
-				     id="templatemo_main_nav" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
-					
-					<span class="main_a_txt me-3">[ 관리자 모드 ]</span>
-					<a href="/admin/book/new" class="main_a_txt me-3">책 등록</a>
-					<a href="/admin/books" class="main_a_txt me-3">책 관리</a>
-					
+				<div class="align-self-center collapse navbar-collapse flex-fill  
+				d-lg-flex justify-content-lg-between admin_box"
+				     >
+					<span class="me-3">[ 관리자 모드 ]</span>
+					<a href="/admin/book/new" class=" me-3">책 등록</a>
+					<a href="/admin/books" class="me-3">책 관리</a>
 				</div>
 			</div>
-			<div>
-				<a href="/" class="main_a_txt me-3">고객 센터</a>
-				<a href="/" class="main_a_txt">오시는 길</a>
-			</div>
-			
 		</div>
 	</nav>
 	<!-- Close Top Nav -->
 
 
-	<nav class="navbar navbar-expand-lg navbar-light shadow">
+	<nav class="navbar navbar-expand-lg navbar-light header_nav_top">
 		<div
 			class="container d-flex justify-content-between align-items-center">
 
-			<a class="navbar-brand text-success logo h1 align-self-center"
+			<a class="text-success logo align-self-center"
 				href="/"> <img alt="로고" src="/img/MOOK.png" width="100">
 			</a>
 
@@ -52,7 +42,7 @@
 				class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
 				id="templatemo_main_nav">
 				<div class="flex-fill"></div>
-				<div class="navbar align-self-center d-flex">
+				<div class="navbar_top align-self-center d-flex">
 					<div
 						class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
 						<div class="input-group">
@@ -82,6 +72,28 @@
 				</div>
 			</div>
 
+		</div>
+	</nav>
+		<nav
+		class="navbar_bottom navbar-expand-lg navbar-light d-none d-lg-block header_nav_bottom"
+		>
+		<div class="container text-light">
+					<!-- <a href="/admin/book/new" class="main_a_txt me-3">책 등록</a>
+					<a href="/admin/books" class="main_a_txt me-3">책 관리</a> -->
+		<div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-center mx-lg-auto">
+                        <li class="nav-item ul_li">
+                            <a class="nav-a" href="index.html">자료</a>
+                        </li>
+                        <li class="nav-item  ul_li">
+                            <a class="nav-a" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item  ul_li">
+                            <a class="nav-a" href="shop.html">1:1문의</a>
+                        </li>
+                    </ul>
+                </div>
+			
 		</div>
 	</nav>
 
