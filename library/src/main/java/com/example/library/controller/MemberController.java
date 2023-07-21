@@ -73,6 +73,7 @@ public class MemberController {
 		return "redirect:/";
 	}
 	
+	
 	@GetMapping(value = "/phoneCheck")
 	@ResponseBody
 	public String numberCh(@RequestParam(value="phoneNumber")String phoneNumber , Model model) throws CoolsmsException {
