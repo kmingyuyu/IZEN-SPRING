@@ -109,3 +109,97 @@
 .detail_button {
 	display: flex;
 }
+
+
+
+
+
+/*  ---------------------------- */
+
+.mlist {
+    height: 250px;
+    margin: 50px 0 50px 0;
+    display: flex;
+    justify-content: center;
+}
+.ml-center {
+    width: 960px;
+    display: flex;
+
+}
+
+.mlc-1 {
+    width: 300px;
+}
+.mlc-1 > div:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(216, 214, 214);
+    width: 100%;
+    height: 40px;
+}
+.mlc-1  > div:nth-child(2) {
+    margin-top: 20px;
+
+}
+.mlc-1  > div:nth-child(2) > div:nth-child(1) a {
+    height: 185px;
+    width: 300px;
+    background-image: url(../images/banner1.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.mlc-2 {
+    height: 250px;
+    margin-left:40px;
+    width: 300px;   
+    
+}
+
+.mlc-2 > div:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(216, 214, 214);
+    width: 100%;
+    height: 40px;   
+}
+
+.mlc2-bt {
+    float: right;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    padding: 5px 8px;
+    color: rgb(92, 92, 92) !important;
+}
+.mlc2-bt:hover {
+
+}
+
+
+.mlc-2 > div:nth-child(2) {
+    margin-top: 10px;
+    
+}
+
+.mlc2-llout {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    }
+.mlc2-llout:hover {
+    background-color: rgb(243, 243, 243);
+
+}
+.mlc2-llout a {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 300px;
+    text-align: left;
+    font-size: 13px !important;
+}
+
