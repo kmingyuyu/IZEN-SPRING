@@ -33,7 +33,7 @@ public class BookImgService {
 			imgName = fileService.uploadFile
 					(bookImgLocation, oriImgName, bookImgFile.getBytes());
 			
-			imgUrl = "/images/book/" + imgName;
+			imgUrl = "/img/book/" + imgName;
 		}
 		
 		bookImg.updateItemImg(oriImgName, imgName, imgUrl);
@@ -58,7 +58,7 @@ public class BookImgService {
 			String imgName = fileService.uploadFile
 					(bookImgLocation, oriImgName, bookImgFile.getBytes());
 			
-			String imgUrl = "/images/book/" + imgName;
+			String imgUrl = "/img/book/" + imgName;
 			
 			
 			savedBookImg.updateItemImg(oriImgName, imgName, imgUrl);

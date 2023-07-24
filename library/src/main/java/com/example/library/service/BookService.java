@@ -11,6 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.example.library.constant.ImgChoiceOk;
 import com.example.library.dto.BookFormDto;
 import com.example.library.dto.BookSearchDto;
+import com.example.library.dto.MainBookDto;
 import com.example.library.entity.Book;
 import com.example.library.entity.BookImg;
 import com.example.library.repository.BookImgRepository;
@@ -60,20 +61,26 @@ public class BookService {
 		return book.getId();
 	}
 	
-	
-	
-	
-	
-	
 	@Transactional(readOnly = true)
 	public Page<Book> getAdminBookPage(BookSearchDto bookSearchDto , Pageable pageable){
 		Page<Book> bookPage = bookRepository.getAdminBookPage(bookSearchDto, pageable);
 		return bookPage;
 	}
 	
+	@Transactional(readOnly = true)
+	public Page<MainBookDto> getMainBookNewPage(BookSearchDto bookSearchDto , Pageable pageable) {
+		Page<MainBookDto> mainBookPage = bookRepository.getMainBookNewPage(bookSearchDto, pageable);
+		return mainBookPage;
+		
+	}
 	
-	
-	
+	@Transactional(readOnly = true)
+	public Page<MainBookDto> getMainBookCountPage(BookSearchDto bookSearchDto , Pageable pageable) {
+		Page<MainBookDto> mainBookPage = bookRepository.getMainBookCountPage(bookSearchDto, pageable);
+		return mainBookPage;
+		
+	}
+
 	
 	
 }

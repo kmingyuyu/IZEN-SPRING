@@ -8,10 +8,14 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.thymeleaf.util.StringUtils;
 
+import com.example.library.constant.ImgChoiceOk;
 import com.example.library.constant.StockOk;
 import com.example.library.dto.BookSearchDto;
+import com.example.library.dto.MainBookDto;
+import com.example.library.dto.QMainBookDto;
 import com.example.library.entity.Book;
 import com.example.library.entity.QBook;
+import com.example.library.entity.QBookImg;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.core.types.dsl.Wildcard;
 import com.querydsl.jpa.impl.JPAQueryFactory;
@@ -61,12 +65,22 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 		
 	}
 	
+	private BooleanExpression bookNmLike(String searchQuery) {
+		
+		if(StringUtils.isEmpty(searchQuery)) {
+			return null;
+		}
+		
+		return QBook.book.bookName.like("%" + searchQuery + "%");
+	}
+	
 	
 	
 	@Override
 	public Page<Book> getAdminBookPage(BookSearchDto bookSearchDto, Pageable pageable) {
 
-		List<Book> content = queryFactory.selectFrom(QBook.book)
+		List<Book> content = queryFactory
+				.selectFrom(QBook.book)
 				.where(regDtsAfter(bookSearchDto.getSearchDateType()), 
 						searchStockOkEq(bookSearchDto.getStockOk()),
 						searchByLike(bookSearchDto.getSearchBy(), bookSearchDto.getSearchQuery()))
@@ -84,6 +98,88 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 		
 
 		return new PageImpl<>(content , pageable , total);
+	}
+
+	@Override
+	public Page<MainBookDto> getMainBookNewPage(BookSearchDto bookSearchDto, Pageable pageable) {
+		
+		QBook book = QBook.book;
+		QBookImg bookImg = QBookImg.bookImg;
+	
+		List<MainBookDto> content = queryFactory
+				.select(
+						new QMainBookDto(
+								book.id,
+								book.bookName,
+								book.writer,
+								book.pubDate,
+								book.publisher,
+								bookImg.imgUrl,
+								book.typeOk
+								)
+						)
+				.from(bookImg)
+				.join(bookImg.book , book)
+				.where(bookImg.imgChoiceOk.eq(ImgChoiceOk.MAIN))
+				.where(bookNmLike(bookSearchDto.getSearchQuery()))
+				.orderBy(book.id.desc())
+				.offset(pageable.getOffset())
+				.limit(pageable.getPageSize())
+				.fetch();
+		
+		long total = queryFactory
+				.select(Wildcard.count)
+				.from(bookImg)
+				.join(bookImg.book , book)
+				.where(bookImg.imgChoiceOk.eq(ImgChoiceOk.MAIN))
+				.where(bookNmLike(bookSearchDto.getSearchQuery()))
+				.fetchOne();
+		
+		return new PageImpl<>(content , pageable , total);
+		
+	}
+
+	@Override
+	public Page<MainBookDto> getMainBookCountPage(BookSearchDto bookSearchDto, Pageable pageable) {
+		
+		QBook book = QBook.book;
+		QBookImg bookImg = QBookImg.bookImg;
+		
+		List<MainBookDto> content = queryFactory
+				.select(
+						new QMainBookDto(
+								book.id,
+								book.bookName,
+								book.writer,
+								book.pubDate,
+								book.publisher,
+								bookImg.imgUrl,
+								book.typeOk
+								)
+						)
+				.from(bookImg)
+				.join(bookImg.book , book)
+				.where(bookImg.imgChoiceOk.eq(ImgChoiceOk.MAIN))
+				.where(bookNmLike(bookSearchDto.getSearchQuery()))
+				.orderBy(book.borrowCount.asc())
+				.offset(pageable.getOffset())
+				.limit(pageable.getPageSize())
+				.fetch();
+		
+		long total = queryFactory
+				.select(Wildcard.count)
+				.from(bookImg)
+				.join(bookImg.book , book)
+				.where(bookImg.imgChoiceOk.eq(ImgChoiceOk.MAIN))
+				.where(bookNmLike(bookSearchDto.getSearchQuery()))
+				.fetchOne();
+		
+		
+		
+		
+		return new PageImpl<>(content , pageable , total);
+		
+		
 	}
 
 }
