@@ -2,140 +2,143 @@
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 	layout:decorate="~{layouts/layout}">
-	
-	<div layout:fragment="content">
-	
-		<div class="bg-light py-3">
+
+<div layout:fragment="content">
+
+	<th:block layout:fragment="css">
+
+		<link rel="stylesheet" href="/css/bookMng.css">
+
+	</th:block>
+
+	<div class="bg-light py-3">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 mb-0">
 					<a href="/">Home</a> <span class="mx-2 mb-0">/</span> <strong
-						class="text-black">상품관리</strong>
+						class="text-black">책 관리</strong>
 				</div>
 			</div>
 		</div>
 	</div>
-		
-		<div class="site-section">
+
+	<div class="site-section">
 		<div class="container">
 			<div class="row">
+				<section class="container pt-5">
+					<div class="item-location item-additional-info">
+						<div
+							class="item-location-header justify-content-start align-items-center mb-3">
+							<div class="item-location-content tab-content">
 
-				<div class="col-md-12">
-					<h2 class="h3 mb-3 text-black">상품관리</h2>
-					<form th:action="@{'/admin/books/' + ${books.number}}"
-					method="get" th:object="${books}">
-						<table class="table table-responsive-md">
-							<thead>
-								<tr>
-									<th scope="col">id</th>
-									<th scope="col">상품명</th>
-									<th scope="col">대출가능</th>
-									<th scope="col">등록자</th>
-									<th scope="col">등록일</th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- 조회된 데이터를 출력한다. -->
-								<tr th:each="book, status: ${books.getContent()}">
-									<th th:text="${book.id}" scope="row"></th>
-									<td>
-										<a th:href="'/admin/book/' + ${book.id}"
-										   th:text="${book.bookName}">
-										</a>
-									</td>
-									<td th:text="${book.stockOk}"></td>
-									<td th:text="${book.createdBy}"></td>
-									<td th:text="${book.regTime}"></td>
-								</tr>
-							</tbody>
-						</table>
 
-						<!-- 페이징버튼 -->
-						<!-- start = (현재 페이지 번호/보여줄 페이지수) * 보여줄 페이지수 + 1, 페이지 시작번호 -->
-						<!-- end = start + (보여줄 페이지수 - 1), 페이지 끝번호 -->
-						<!-- 
-						     끝번호가 전체페이지보다 작으면 그냥 끝번호를 쓴다  
-						     예) 전체 페이지 7, 끝번호 5
-						     ◀ 1 2 3 4 5 ▶
-						     ◀ 6 7
-						-->
-					<nav
-					th:with="start=${(books.number/maxPage)*maxPage + 1}
-			                 ,end=(${(books.totalPages == 0) ? 1 : (start + (maxPage - 1) < books.totalPages ? start + (maxPage - 1) : books.totalPages)})"
-							aria-label="Page navigation example">
-							<ul class="pagination d-flex justify-content-center">
-								<li class="page-item" th:classappend="${books.first}?'disabled'">
-									<a class="page-link"
-									th:onclick="'javascript:page(' + ${books.number - 1} +')'">이전</a>
-								</li>
-								
-								<li class="page-item"
-									th:each="page: ${#numbers.sequence(start, end)}"
-									th:classappend="${books.number eq page-1}?'active':''">
-									<a
-									class="page-link" th:inline="text"
-									th:onclick="'javascript:page(' + ${page - 1} +')'">[[${page}]]</a>
-								</li>
-								
-								<li class="page-item" th:classappend="${books.last}?'disabled'">
-									<a class="page-link"
-									th:onclick="'javascript:page(' + ${books.number + 1} +')'">다음</a>
-								</li>
-							</ul>
-						</nav>
-						
-						<div class="row" 
-						     th:object="${bookSearchDto}" style="height: 40px;">
-							<div class="col-lg-2"></div>
-							<div class="col-lg-5" style="display:flex;">
-								<!-- 상품 등록일 -->
-								<select th:field="*{searchDateType}" class="form-control">
-									<option value="all">전체기간</option>
-									<option value="1d">1일</option>
-									<option value="1w">1주</option>
-									<option value="1m">1개월</option>
-									<option value="6m">6개월</option>
-								</select>
-								<!-- 상품판매 상태 -->
-								<select th:field="*{stockOk}" class="form-control">
-									<option value="">대출상태(전체)</option>
-									<option value="Y">대출가능</option>
-									<option value="N">대출중</option>
-								</select>
-								<!-- 상품명, 등록자 선택 -->
-								<select th:field="*{searchBy}" class="form-control">
-									<option value="bookName">상품명</option>
-									<option value="createdBy">등록자</option>
-								</select>
-							</div>
-							<div class="col-lg-3">
-								<div style="display:flex;">
-									<input type="text" class="form-control"
-									th:field="*{searchQuery}" placeholder="검색어 입력">
-									<button id="searchBtn" type="submit" class="btn btn-primary mb-3">검색</button>							
+								<div class="tab-pane fade show active" id="locs-1"
+									role="tabpanel" aria-labelledby="locs-1-tab">
+									<div class="table-container table-locations">
+										<table class="table table-sm table-hover text-center">
+											<thead>
+												<tr>
+													<th scope="col">No.</th>
+													<th scope="col">책제목</th>
+													<th scope="col">등록번호</th>
+													<th scope="col">도서상태</th>
+													<th scope="col">반납예정일</th>
+													<th scope="col">예약</th>
+													<th scope="col">대출수</th>
+													<th scope="col">등록자</th>
+													<th scope="col">등록일</th>
+													<th scope="col">수정</th>
+													<th scope="col">상세</th>
+												</tr>
+											</thead>
+											<th:block th:each="book , status:${books.getContent()}">
+											<tbody>
+												<tr>
+													<td>[[${book.id}]]</td>
+													<td>[[${book.bookName}]]</td>
+													<td>[[${book.id}]]</td>
+													<th:block th:if="${book.stockOk.toString()} == 'Y' ">
+														<td class="str_yes">대출가능</td>
+														<td>-</td>
+														<td class="str_yes">예약가능</td>
+													</th:block>
+
+													<th:block th:if="${book.stockOk.toString()} == 'N' ">
+														<td class="str_no">대출중</td>
+														<td>-</td>
+														<td class="str_no">대출중</td>
+													</th:block>
+													<td>[[${book.borrowCount}]]</td>
+													<td>[[${book.createdBy}]]</td>
+													<td th:text="${#temporals.format(book.regTime, 'yyyy-MM-dd')}"></td>
+													<td><a href="#"><button type="button" class="update_bt">수정하기</button></a></td>
+													<td><a th:href="'/admin/book/' + ${book.id}"><button type="button" class="update_bt">상세정보</button></a></td>
+												</tr>
+											</tbody>
+											</th:block>
+										</table>
+									</div>
 								</div>
 							</div>
-							<div class="col-lg-2"></div>
 						</div>
-					</form>
-				</div>
+					</div>
 
+
+
+
+				</section>
+
+
+				<div class="row" th:object="${bookSearchDto}" style="height: 40px;">
+					<div class="col-lg-2"></div>
+					<div class="col-lg-5" style="display: flex;">
+						<!-- 상품 등록일 -->
+						<select th:field="*{searchDateType}" class="form-control">
+							<option value="all">전체기간</option>
+							<option value="1d">1일</option>
+							<option value="1w">1주</option>
+							<option value="1m">1개월</option>
+							<option value="6m">6개월</option>
+						</select>
+						<!-- 상품판매 상태 -->
+						<select th:field="*{stockOk}" class="form-control">
+							<option value="">대출상태(전체)</option>
+							<option value="Y">대출가능</option>
+							<option value="N">대출중</option>
+						</select>
+						<!-- 상품명, 등록자 선택 -->
+						<select th:field="*{searchBy}" class="form-control">
+							<option value="bookName">상품명</option>
+							<option value="createdBy">등록자</option>
+						</select>
+					</div>
+					<div class="col-lg-3">
+						<div style="display: flex;">
+							<input type="text" class="form-control" th:field="*{searchQuery}"
+								placeholder="검색어 입력">
+							<button id="searchBtn" type="submit" class="btn btn-primary mb-3">검색</button>
+						</div>
+					</div>
+					<div class="col-lg-2"></div>
+				</div>
+				</form>
 			</div>
+
 		</div>
-	</div>	
 	</div>
-	<th:block layout:fragment="script">
-		<script th:inline="javascript">
-		
-$(document).ready(function() {
-			
-			$("#searchBtn").on("click", function(e){
+</div>
+</div>
+<th:block layout:fragment="script">
+	<script th:inline="javascript">
+		$(document).ready(function() {
+
+			$("#searchBtn").on("click", function(e) {
 				e.preventDefault(); //submit되는걸 방지
 				page(0);
 			});
-			
+
 		});
-		
+
 		//페이징버튼 눌렀을때 혹은 검색버튼 눌렀을때 검색어와 selectbox를 get방식으로 주소이동시켜준다.
 		function page(page) {
 			//입력한 값을 전부 가지고 온다.
@@ -143,17 +146,13 @@ $(document).ready(function() {
 			var stockOk = $("#stockOk").val();
 			var searchBy = $("#searchBy").val();
 			var searchQuery = $("#searchQuery").val();
-			
+
 			//주소 이동
-			location.href = "/admin/books/" + page 
-			              + "?searchDateType=" + searchDateType
-			              + "&stockOk=" + stockOk
-			              + "&searchBy=" + searchBy
-			              + "&searchQuery=" + searchQuery;
+			location.href = "/admin/books/" + page + "?searchDateType="
+					+ searchDateType + "&stockOk=" + stockOk + "&searchBy="
+					+ searchBy + "&searchQuery=" + searchQuery;
 		}
-		
-		
-		</script>
-	</th:block>
+	</script>
+</th:block>
 
 </html>

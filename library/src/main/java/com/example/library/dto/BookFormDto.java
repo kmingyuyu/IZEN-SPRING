@@ -40,6 +40,7 @@ public class BookFormDto {
 	private StockOk stockOk;
 	
 	
+	
 //	상품 이미지 정보를 저장
 	private List<BookImgDto> bookImgDtoList = new ArrayList<>();
 	

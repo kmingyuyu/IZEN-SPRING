@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="lombok.extern.java.Log"/>
-    <fullyQualifiedTypeName name="com.example.library.service.FileService"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.EntityNotFoundException"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="com.example.library.repository.BookRepository"/>
-    <fullyQualifiedTypeName name="com.example.library.entity.BookImg"/>
     <fullyQualifiedTypeName name="org.springframework.data.annotation.CreatedBy"/>
     <fullyQualifiedTypeName name="jakarta.persistence.EntityListeners"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.domain.support.AuditingEntityListener"/>
@@ -22,15 +18,12 @@
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.config.EnableJpaAuditing"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="org.springframework.data.domain.AuditorAware"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-    <fullyQualifiedTypeName name="com.example.library.dto.BookFormDto"/>
     <fullyQualifiedTypeName name="org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item"/>
     <fullyQualifiedTypeName name="java.awt.print.Pageable"/>
     <fullyQualifiedTypeName name="jakarta.persistence.EntityManager"/>
     <fullyQualifiedTypeName name="com.querydsl.jpa.impl.JPAQueryFactory"/>
     <fullyQualifiedTypeName name="com.example.library.constant.StockOk"/>
     <fullyQualifiedTypeName name="com.example.library.repository.BookRepositoryCustom"/>
-    <fullyQualifiedTypeName name="com.example.library.entity.Book"/>
     <fullyQualifiedTypeName name="com.example.library.service.BookService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
@@ -46,7 +39,6 @@
     <fullyQualifiedTypeName name="com.example.library.dto.BookSearchDto"/>
     <fullyQualifiedTypeName name="com.example.library.constant.TypeOk"/>
     <fullyQualifiedTypeName name="com.example.library.entity.QBookImg"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.example.library.dto.QMainBookDto"/>
     <fullyQualifiedTypeName name="com.querydsl.core.types.dsl.BooleanExpression"/>
     <fullyQualifiedTypeName name="org.thymeleaf.util.StringUtils"/>
@@ -55,9 +47,17 @@
     <fullyQualifiedTypeName name="org.springframework.data.domain.PageImpl"/>
     <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
     <fullyQualifiedTypeName name="com.example.library.dto.MainBookDto"/>
-    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.WebMvcConfigurer"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.example.library.entity.BookImg"/>
+    <fullyQualifiedTypeName name="com.example.library.dto.BookImgDto"/>
+    <fullyQualifiedTypeName name="com.example.library.entity.Book"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.EntityNotFoundException"/>
+    <fullyQualifiedTypeName name="com.example.library.dto.BookFormDto"/>
 </qualifiedTypeNameHistroy>

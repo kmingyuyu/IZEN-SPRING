@@ -9,11 +9,27 @@ a {
 	text-decoration:none !important; 
 }
 
-ul , li {
+ul , li , h1 , h2 , h3 , h4  {
 	padding: 0;
 	margin: 0;
 }
 
+.container {
+	padding: 0;
+	
+}
+
+.row {
+     --bs-gutter-x: 0; 
+     --bs-gutter-y: 0;
+}
+.row>* {
+	padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
 
 a:hover {
 	

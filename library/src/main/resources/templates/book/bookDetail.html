@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/layout}">
+
+<div layout:fragment="content">
+
+	<th:block layout:fragment="css">
+
+		<link rel="stylesheet" href="/css/bookDetail.css">
+
+	</th:block>
+
+	<div class="bg-light py-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-0">
+					<a href="/">Home</a> <span class="mx-2 mb-0">/</span> <strong
+						class="text-black">책 상세페이지</strong>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="site-section">
+		<div class="container">
+			<div class="row">
+			
+				<section class="container pt-5 pb-4 d-flex b_line">
+							<div class="col-md-4 px-2">
+								<img th:src="${book.bookImgDtoList[0].imgUrl}" th:alt="${book.bookName}" class="dt_img">
+							</div>
+							<div class="col-md-8">
+								<div class="mb-2">
+									<div class="book_name">[[${book.bookName}]]</div>
+								</div>
+								<div class="mb-2">
+									<div class="book_type">[[${book.typeOk}]]</div>
+								</div>
+								<div class="d-flex">
+									<div class="book_category">작가</div>
+									<div class="book_value">[[${book.writer}]]</div>
+								</div>
+								<div class="d-flex">
+									<div class="book_category">출판사</div>
+									<div class="book_value">[[${book.publisher}]]</div>
+								</div>
+								<div class="d-flex">
+									<div class="book_category">출판일</div>
+									<div class="book_value">[[${book.pubDate}]]</div>
+								</div>
+								<div class="">
+									<button type="button" class="borrow_bt">대출예약</button>
+									<button type="button" class="steamed_bt">찜하기</button>
+								</div>
+							</div>
+				</section>
+
+				<section class="container pt-5">
+					<div class="item-location item-additional-info">
+						<h3 class="mb-3">소장정보</h3>
+						<div
+							class="item-location-header justify-content-start align-items-center mb-3">
+							<div class="item-location-content tab-content">
+
+								<!-- 소장처 CODE=000AC4JL | 소장처 명=세종학술정보원	 -->
+
+								<div class="tab-pane fade show active" id="locs-1"
+									role="tabpanel" aria-labelledby="locs-1-tab">
+									<div class="table-container table-locations">
+										<table class="table table-sm table-hover text-center">
+											<thead>
+												<tr>
+													<th scope="col">No.</th>
+													<th scope="col">소장처</th>
+													<th scope="col">등록번호</th>
+													<th scope="col">도서상태</th>
+													<th scope="col">반납예정일</th>
+													<th scope="col">예약</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>MOOK</td>
+													<td>[[${book.id}]]</td>
+													<th:block th:if="${book.stockOk.toString()} == 'Y' " >
+														<td class="str_yes">대출가능</td>
+														<td>-</td>
+														<td class="str_yes">예약가능</td>
+													</th:block>
+													
+													<th:block th:if="${book.stockOk.toString()} == 'N' " >
+														<td class="str_no">대출중</td>
+														<td>-</td>
+														<td class="str_no">대출중</td>
+													</th:block>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="item-additional-info item-overview-info">
+						<h3 class="mb-3">컨텐츠 정보</h3>
+						<div class="item-overview-info-block mb-5">
+							<h4>책소개</h4>
+							<div class="item-overview-info-block-body">
+								<p>[[${book.story}]]</p>
+							</div>
+						</div>
+						<div class="item-overview-info-block mb-5">
+							<h4>저자소개</h4>
+							<div class="item-overview-info-block-body">
+								<p>[[${book.story}]]</p>
+							</div>
+						</div>
+					</div>
+
+				</section>
+
+
+
+
+			</div>
+		</div>
+	</div>
+</div>
+<th:block layout:fragment="script">
+
+</th:block>
+
+
+</html>
