@@ -11,16 +11,6 @@
 
 	</th:block>
 
-	<div class="bg-light py-3">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-0">
-					<a href="/">Home</a> <span class="mx-2 mb-0">/</span> <strong
-						class="text-black">책 상세페이지</strong>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<div class="site-section">
 		<div class="container">
@@ -32,7 +22,7 @@
 							</div>
 							<div class="col-md-8">
 								<div class="mb-2">
-									<div class="book_name">[[${book.bookName}]]</div>
+									<div class="book_name">[[${book.bookName}]] <span class="book_count"> ([[${book.borrowCount}]]회 대출) </span> </div>
 								</div>
 								<div class="mb-2">
 									<div class="book_type">[[${book.typeOk}]]</div>
@@ -63,7 +53,6 @@
 							class="item-location-header justify-content-start align-items-center mb-3">
 							<div class="item-location-content tab-content">
 
-								<!-- 소장처 CODE=000AC4JL | 소장처 명=세종학술정보원	 -->
 
 								<div class="tab-pane fade show active" id="locs-1"
 									role="tabpanel" aria-labelledby="locs-1-tab">
@@ -71,8 +60,7 @@
 										<table class="table table-sm table-hover text-center">
 											<thead>
 												<tr>
-													<th scope="col">No.</th>
-													<th scope="col">소장처</th>
+													<th scope="col">제목</th>
 													<th scope="col">등록번호</th>
 													<th scope="col">도서상태</th>
 													<th scope="col">반납예정일</th>
@@ -81,8 +69,7 @@
 											</thead>
 											<tbody>
 												<tr>
-													<td>1</td>
-													<td>MOOK</td>
+													<td>[[${book.bookName}]]</td>
 													<td>[[${book.id}]]</td>
 													<th:block th:if="${book.stockOk.toString()} == 'Y' " >
 														<td class="str_yes">대출가능</td>

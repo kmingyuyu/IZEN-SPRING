@@ -35,17 +35,19 @@ public class BookFormDto {
 	@NotNull(message = "간략 줄거리를 입력 해주세요")
 	private String story;
 	
+	@NotNull(message = "카테고리를 설정 해주세요")
 	private TypeOk typeOk; 
 	
-	private StockOk stockOk;
+	private StockOk stockOk = StockOk.Y;
 	
-	
+	private int borrowCount = 0;
 	
 //	상품 이미지 정보를 저장
 	private List<BookImgDto> bookImgDtoList = new ArrayList<>();
+
 	
 //	상품이미지 아이디를 저장 : 수정시 이미지 아이디 담아둘 용도
-	private List<Long> itemImgIds = new ArrayList<>();
+	private List<Long> bookImgIds = new ArrayList<>();
 	
 	private static ModelMapper modelMapper = new ModelMapper();
 	

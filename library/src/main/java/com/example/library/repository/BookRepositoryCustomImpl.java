@@ -100,6 +100,7 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 		return new PageImpl<>(content , pageable , total);
 	}
 
+//	최근 등록된 순으로 
 	@Override
 	public Page<MainBookDto> getMainBookNewPage(BookSearchDto bookSearchDto, Pageable pageable) {
 		
@@ -139,6 +140,7 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 		
 	}
 
+//	총대출수 많은 순으로 
 	@Override
 	public Page<MainBookDto> getMainBookCountPage(BookSearchDto bookSearchDto, Pageable pageable) {
 		
