@@ -35,10 +35,10 @@ public class BookService {
 	
 	private final BookImgRepository bookImgRepository;
 	
-//	상품등록
+//	도서등록
 	public Long saveBook(BookFormDto bookFormDto , List<MultipartFile> bookImgFileList) throws Exception {
 		
-//		상품등록
+//		도서등록
 		Book book = bookFormDto.createBook();
 		bookRepository.save(book);
 		
@@ -91,6 +91,39 @@ public class BookService {
 		return bookFormDto;
 		
 	}
+	
+	public Long updateBook(BookFormDto bookFormDto , List<MultipartFile> bookimgFileList) throws Exception {
+		
+		Book book = bookRepository.findById(bookFormDto.getId())
+						.orElseThrow(EntityNotFoundException::new);
+		
+		book.updateBook(bookFormDto);
+		
+		List<Long> bookImgIds = bookFormDto.getBookImgIds();
+		
+		for(int i=0; i<bookimgFileList.size(); i++) {
+			bookImgService.updateBookImg(bookImgIds.get(i), bookimgFileList.get(i));
+		}
+		
+		return book.getId();
+	}
+	
+	public void deleteBook(Long bookId) throws Exception{
+		
+		Book book = bookRepository.findById(bookId)
+						.orElseThrow(EntityNotFoundException::new);
+		
+		List<BookImg> bookImgList = bookImgRepository.findByBookId(bookId);
+		
+		for(BookImg bookImg : bookImgList) {
+			bookImgService.deleteBookImg(bookImg);
+			bookImgRepository.delete(bookImg);
+		}
+		
+		bookRepository.delete(book);
+		
+	}
+	
 	
 	
 	

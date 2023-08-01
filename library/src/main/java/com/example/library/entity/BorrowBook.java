@@ -1,6 +1,8 @@
 package com.example.library.entity;
 
 
+import com.example.library.constant.StockOk;
+
 import groovy.transform.ToString;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,7 +20,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name="borrow_book")
-public class BorrowBook {
+public class BorrowBook extends BaseEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,6 +34,20 @@ public class BorrowBook {
 	@ManyToOne
 	@JoinColumn(name="borrow_id")
 	private Borrow borrow;
+	
+	public static BorrowBook createBorrowBook(Book book) {
+		
+		BorrowBook borrowBook = new BorrowBook();
+		borrowBook.setBook(book);
+		
+		book.setStockOk(StockOk.N);
+		book.setBorrowCount(book.getBorrowCount()+1);;
+		return borrowBook;
+		
+	}
+	
+	
+	
 	
 	
 }

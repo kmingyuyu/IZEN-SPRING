@@ -42,6 +42,12 @@ public class BookImgService {
 		
 	}
 	
+//	도서삭제시 이미지삭제
+	public void deleteBookImg(BookImg bookImg) throws Exception {
+		fileService.deleteFile(bookImgLocation + "/" + bookImg.getImgName());
+	}
+	
+	
 //	이미지 업데이트
 	public void updateBookImg(Long bookImgId ,MultipartFile bookImgFile ) throws Exception {
 		

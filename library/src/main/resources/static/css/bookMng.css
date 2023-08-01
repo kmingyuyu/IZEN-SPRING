@@ -1,5 +1,111 @@
 @charset "UTF-8";
 
+.select_nav_bottom {
+	border-bottom: 1px solid #dedede;
+}
+
+.nav_link {
+	padding: 10px 15px;
+	font-weight: bold;
+}
+
+.nav_link:hover {
+	transition: 0.2s ease-out;
+	background-color: rgb(2, 87, 215);
+}
+
+.nav_link:hover > .nav_link_a {
+	transition: 0.2s ease-out;
+	color: white !important;
+	
+}
+
+.nav_link_a {
+	font-weight: bold !important;
+	font-size: 15px;
+}
+
+.link_active {
+	background-color: rgb(2, 87, 215);
+}
+
+.link_active a {
+	color: white !important;
+}
+
+
+.search_form {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+
+
+
+
+.form_select {
+	font-size: .8rem;
+	width: 80px;
+	height: 40px;
+	border-radius: 0px;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+	background-color: rgb(246, 246, 246);
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+
+
+.form_search {
+	width: 350px;
+	height: 40px;
+	border-radius: 0px;
+	border: 1px solid #dee2e6;
+}
+
+.form_search::placeholder {
+	font-size: 15px;
+	font-weight: 550;
+	color: rgb(130, 146, 159);
+}
+
+.form_search_bt {
+	width: 100px;
+	height: 40px;
+	border: none;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	background-color: rgb(126, 151, 192);
+	color: white;
+	font-weight: bold;
+	
+}
+
+.form_search_bt:hover {
+	transition: 0.2s ease-out;
+    background-color: rgb(2, 87, 215);
+}
+
+.form_search_bt:not(:hover) {
+	transition: 0.2s ease-out;
+}
+
+.book_size {
+	font-size: 15px !important;
+	font-weight: bold !important;
+}
+
+.book_size span {
+	font-size: 20px !important;
+}
+
+.book_page {
+	display: flex;
+}
+
+
 .tab-content > .active {
     display: block;
 }
@@ -49,10 +155,6 @@
     vertical-align: middle;
 }
 
-.item-additional-info {
-    margin-top: 3rem;
-}
-
 .item-additional-info h3 {
     font-weight: 550;
     font-size: 20px;
@@ -98,13 +200,20 @@
 }
 
 .update_bt {
+	padding: 5px;
 	border-radius:5px;
 	color:white;
-	background-color:#a5a5a5;
+	background-color:#c5ccd3!important;
 	border: none;
+	font-weight: bold;
 }
 
 .update_bt:hover {
 	outline:none;
-	background-color:#0D6EFD;
+	transition: 0.2s ease-out;
+	background-color:#98a5b1!important;
+}
+
+.form_search_bt:not(:hover) {
+	transition: 0.2s ease-out;
 }

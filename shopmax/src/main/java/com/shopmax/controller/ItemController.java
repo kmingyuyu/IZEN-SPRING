@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.shopmax.dto.ItemFormDto;
+import com.shopmax.dto.ItemImgDto;
 import com.shopmax.dto.ItemSearchDto;
 import com.shopmax.dto.MainItemDto;
 import com.shopmax.entity.Item;
@@ -112,6 +113,8 @@ public class ItemController {
 	
 		try {
 			ItemFormDto itemFormDto = itemService.getItemDtl(itemId);
+			
+			
 			model.addAttribute("itemFormDto", itemFormDto);
 		} catch (Exception e) {
 			e.printStackTrace();

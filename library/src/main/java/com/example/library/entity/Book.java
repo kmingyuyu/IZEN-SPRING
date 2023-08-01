@@ -52,7 +52,7 @@ public class Book extends BaseEntity {
 	@Enumerated(EnumType.STRING)
 	private StockOk stockOk; //책 상태
 	
-	private int borrowCount; //총 대출수
+	private int borrowCount ; //총 대출수
 	
 	public void updateBook(BookFormDto bookFormDto) {
 		this.bookName = bookFormDto.getBookName();
@@ -63,6 +63,7 @@ public class Book extends BaseEntity {
 		this.story = bookFormDto.getStory();
 		this.stockOk = bookFormDto.getStockOk();
 	}
+	
 	
 	
 }

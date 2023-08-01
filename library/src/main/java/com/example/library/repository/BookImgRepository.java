@@ -9,6 +9,8 @@ import com.example.library.entity.BookImg;
 
 public interface BookImgRepository extends JpaRepository<BookImg , Long> {
 	
+	List<BookImg> findByBookId(Long bookId);
+	
 	List<BookImg> findByBookIdOrderByIdAsc(Long bookId);
 	
 	BookImg findByBookIdAndImgChoiceOk(Long bookId , ImgChoiceOk imgChoiceOk);

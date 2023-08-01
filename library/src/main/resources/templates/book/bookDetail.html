@@ -3,6 +3,12 @@
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 	layout:decorate="~{layouts/layout}">
 
+<head>
+	<meta name="_csrf" th:content="${_csrf.token}" />
+	<meta name="_csrf_header" th:content="${_csrf.headerName}" />
+</head>
+
+
 <div layout:fragment="content">
 
 	<th:block layout:fragment="css">
@@ -11,28 +17,18 @@
 
 	</th:block>
 
-	<div class="bg-light py-3">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-0">
-					<a href="/">Home</a> <span class="mx-2 mb-0">/</span> <strong
-						class="text-black">책 상세페이지</strong>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<div class="site-section">
 		<div class="container">
 			<div class="row">
-			
+				<input type="hidden" id="bookId" th:value="${book.id}">
 				<section class="container pt-5 pb-4 d-flex b_line">
 							<div class="col-md-4 px-2">
 								<img th:src="${book.bookImgDtoList[0].imgUrl}" th:alt="${book.bookName}" class="dt_img">
 							</div>
 							<div class="col-md-8">
 								<div class="mb-2">
-									<div class="book_name">[[${book.bookName}]]</div>
+									<div class="book_name">[[${book.bookName}]] <span class="book_count"> ([[${book.borrowCount}]]회 대출) </span> </div>
 								</div>
 								<div class="mb-2">
 									<div class="book_type">[[${book.typeOk}]]</div>
@@ -50,7 +46,8 @@
 									<div class="book_value">[[${book.pubDate}]]</div>
 								</div>
 								<div class="">
-									<button type="button" class="borrow_bt">대출예약</button>
+									<button th:if="${book.stockOk.toString() == 'Y'}" type="button" class="borrow_bt" onclick="bookReserve()">대출예약</button>
+									<button th:if="${book.stockOk.toString() == 'N'}" type="button" class="borrow_bt borrow_bt_disabled" disabled>현재 대출중입니다</button>
 									<button type="button" class="steamed_bt">찜하기</button>
 								</div>
 							</div>
@@ -63,7 +60,6 @@
 							class="item-location-header justify-content-start align-items-center mb-3">
 							<div class="item-location-content tab-content">
 
-								<!-- 소장처 CODE=000AC4JL | 소장처 명=세종학술정보원	 -->
 
 								<div class="tab-pane fade show active" id="locs-1"
 									role="tabpanel" aria-labelledby="locs-1-tab">
@@ -71,8 +67,7 @@
 										<table class="table table-sm table-hover text-center">
 											<thead>
 												<tr>
-													<th scope="col">No.</th>
-													<th scope="col">소장처</th>
+													<th scope="col">제목</th>
 													<th scope="col">등록번호</th>
 													<th scope="col">도서상태</th>
 													<th scope="col">반납예정일</th>
@@ -81,8 +76,7 @@
 											</thead>
 											<tbody>
 												<tr>
-													<td>1</td>
-													<td>MOOK</td>
+													<td>[[${book.bookName}]]</td>
 													<td>[[${book.id}]]</td>
 													<th:block th:if="${book.stockOk.toString()} == 'Y' " >
 														<td class="str_yes">대출가능</td>
@@ -131,7 +125,85 @@
 	</div>
 </div>
 <th:block layout:fragment="script">
+	<script th:inline="javascript">
+		
 
+	
+			let now = [[${now}]]
+		
+	
+		function bookReserve(){
+		/* 	
+			let today = new Date();   
+
+			
+			
+			var week = ['일', '월', '화', '수', '목', '금', '토'];
+			console.log( week[day] + '요일' );
+			
+			let week = new Array('일', '월', '화', '수', '목', '금', '토');
+			let returnday;
+			let todayLabel;
+			today = new Date("2021-01-01").getDay();
+			todayLabel = week[today];
+			 */
+			
+			
+			if(confirm("대출 예약하시겠습니까?\n"+
+					   "대출기간을 7일 입니다\n"+
+					   "대출기간 : "+ now + 
+					   
+					   
+					   year + "-" + month + "-" + date + "(" + week[day] + ")" + 
+					   "~" + year + "-" + month + "-" + returndate + "(" + week[returnday] + ")" )){
+				
+			var token = $("meta[name='_csrf']").attr("content");
+			var header = $("meta[name='_csrf_header']").attr("content");
+			
+			var url = "/borrow";
+			
+			var Data = {bookId : $("#bookId").val()}
+			
+			var param = JSON.stringify(Data);
+			
+
+			$.ajax({
+				url : url, //request URL
+				type : "POST", //전송방식
+				contentType : "application/json",
+				data : param, //서버에 전송할 데이터
+				beforeSend : function(xhr) {
+					//데이터를 전송하기전에 헤더에 csrf 값을 설정
+					xhr.setRequestHeader(header, token);
+				},
+				dataType : "json",
+				cache : false,
+				success : function(result, status) {
+					alert("예약 완료 되었습니다.");
+					//location.href = '/';
+				},
+				error : function(jqXHR, status, error) {
+					if (jqXHR.status == '401') {
+						alert('로그인 후 이용해주세요.');
+						location.href = '/member/login';
+					} else {
+						//에러메세지 출력(ResponseEntity에서 받아온 값을 출력해준다)
+						alert(jqXHR.responseText); 
+					}
+				}
+			});
+				
+				
+			}
+			
+			
+			
+			
+			
+			
+		}
+		
+	</script>
 </th:block>
 
 
