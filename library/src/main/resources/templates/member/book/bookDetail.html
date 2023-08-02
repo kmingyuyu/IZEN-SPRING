@@ -127,35 +127,19 @@
 <th:block layout:fragment="script">
 	<script th:inline="javascript">
 		
-
-	
-			let now = [[${now}]]
-		
-	
 		function bookReserve(){
-		/* 	
-			let today = new Date();   
+			
 
-			
-			
-			var week = ['일', '월', '화', '수', '목', '금', '토'];
-			console.log( week[day] + '요일' );
-			
-			let week = new Array('일', '월', '화', '수', '목', '금', '토');
-			let returnday;
-			let todayLabel;
-			today = new Date("2021-01-01").getDay();
-			todayLabel = week[today];
-			 */
-			
-			
+			var date = new Date();
+		    var year = date.getFullYear();
+		    var month = ("0" + (1 + date.getMonth())).slice(-2);
+		    var day = ("0" + date.getDate()).slice(-2);
+		    var returnday = ("0" + date.getDate()+7).slice(-2);
+		    
 			if(confirm("대출 예약하시겠습니까?\n"+
 					   "대출기간을 7일 입니다\n"+
-					   "대출기간 : "+ now + 
-					   
-					   
-					   year + "-" + month + "-" + date + "(" + week[day] + ")" + 
-					   "~" + year + "-" + month + "-" + returndate + "(" + week[returnday] + ")" )){
+					   "대출기간 : " + year + "-" + month + "-" + day + " ~ " +
+					   year + "-" + month + "-" + returnday )){
 				
 			var token = $("meta[name='_csrf']").attr("content");
 			var header = $("meta[name='_csrf_header']").attr("content");

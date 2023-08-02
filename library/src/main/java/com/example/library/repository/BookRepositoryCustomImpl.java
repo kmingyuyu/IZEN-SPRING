@@ -10,6 +10,7 @@ import org.thymeleaf.util.StringUtils;
 
 import com.example.library.constant.ImgChoiceOk;
 import com.example.library.constant.StockOk;
+import com.example.library.constant.TypeOk;
 import com.example.library.dto.BookSearchDto;
 import com.example.library.dto.MainBookDto;
 import com.example.library.dto.QMainBookDto;
@@ -57,10 +58,11 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 		
 		if(StringUtils.equals("bookName", searchBy)) {
 			return QBook.book.bookName.like("%" + searchQuery + "%");
-		} else if(StringUtils.equals("createdBy", searchBy)) {
-			return QBook.book.createdBy.like("%" + searchQuery + "%");
+		} else if(StringUtils.equals("writer", searchBy)) {
+			return QBook.book.writer.like("%" + searchQuery + "%");
+		} else if(StringUtils.equals("publisher", searchBy)) {
+			return QBook.book.publisher.like("%" + searchQuery + "%");
 		}
-			
 		return null;
 		
 	}
@@ -74,14 +76,16 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 		return QBook.book.bookName.like("%" + searchQuery + "%");
 	}
 	
-	
+		
+		
+		
 	
 	@Override
 	public Page<Book> getAdminBookPage(BookSearchDto bookSearchDto, Pageable pageable) {
 
 		List<Book> content = queryFactory
 				.selectFrom(QBook.book)
-				.where(regDtsAfter(bookSearchDto.getSearchDateType()), 
+				.where( regDtsAfter(bookSearchDto.getSearchDateType()), 
 						searchStockOkEq(bookSearchDto.getStockOk()),
 						searchByLike(bookSearchDto.getSearchBy(), bookSearchDto.getSearchQuery()))
 				.orderBy(QBook.book.id.desc())
@@ -102,7 +106,7 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 
 //	최근 등록된 순으로 
 	@Override
-	public Page<MainBookDto> getMainBookNewPage(BookSearchDto bookSearchDto, Pageable pageable) {
+	public Page<MainBookDto> getBookNewPage(BookSearchDto bookSearchDto, Pageable pageable ) {
 		
 		QBook book = QBook.book;
 		QBookImg bookImg = QBookImg.bookImg;
@@ -122,7 +126,7 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 				.from(bookImg)
 				.join(bookImg.book , book)
 				.where(bookImg.imgChoiceOk.eq(ImgChoiceOk.MAIN))
-				.where(bookNmLike(bookSearchDto.getSearchQuery()))
+				.where(searchByLike(bookSearchDto.getSearchBy(), bookSearchDto.getSearchQuery()))
 				.orderBy(book.id.desc())
 				.offset(pageable.getOffset())
 				.limit(pageable.getPageSize())
@@ -132,8 +136,8 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 				.select(Wildcard.count)
 				.from(bookImg)
 				.join(bookImg.book , book)
-				.where(bookImg.imgChoiceOk.eq(ImgChoiceOk.MAIN))
-				.where(bookNmLike(bookSearchDto.getSearchQuery()))
+				.where(bookImg.imgChoiceOk.eq(ImgChoiceOk.MAIN)) 
+				.where(searchByLike(bookSearchDto.getSearchBy(), bookSearchDto.getSearchQuery()))
 				.fetchOne();
 		
 		return new PageImpl<>(content , pageable , total);

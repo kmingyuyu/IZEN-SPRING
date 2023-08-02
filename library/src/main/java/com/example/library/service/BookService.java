@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.example.library.constant.ImgChoiceOk;
+import com.example.library.constant.TypeOk;
 import com.example.library.dto.BookFormDto;
 import com.example.library.dto.BookImgDto;
 import com.example.library.dto.BookSearchDto;
@@ -134,8 +135,8 @@ public class BookService {
 	}
 	
 	@Transactional(readOnly = true)
-	public Page<MainBookDto> getMainBookNewPage(BookSearchDto bookSearchDto , Pageable pageable) {
-		Page<MainBookDto> mainBookPage = bookRepository.getMainBookNewPage(bookSearchDto, pageable);
+	public Page<MainBookDto> getBookNewPage(BookSearchDto bookSearchDto , Pageable pageable ) {
+		Page<MainBookDto> mainBookPage = bookRepository.getBookNewPage(bookSearchDto, pageable );
 		return mainBookPage;
 		
 	}

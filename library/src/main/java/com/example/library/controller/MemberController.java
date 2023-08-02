@@ -28,7 +28,7 @@ public class MemberController {
 //	로그인 화면
 	@GetMapping(value="/member/login")
 	public String login() {
-		return "member/login";
+		return "member/new/login";
 	}
 	
 	
@@ -36,7 +36,7 @@ public class MemberController {
 	@GetMapping(value="/member/new")
 	public String member(Model model) {
 		model.addAttribute("memberDto" , new MemberDto());
-		return "member/memberNew";
+		return "member/new/memberNew";
 	}
 	
 	@GetMapping(value="/member/new1")
@@ -58,7 +58,7 @@ public class MemberController {
 	public String memberOk(@Valid MemberDto memberDto , BindingResult bindingResult , Model model) {
 		
 		if(bindingResult.hasErrors()) {
-			return "member/memberNew";
+			return "member/new/memberNew";
 		}
 		
 		try {
@@ -67,7 +67,7 @@ public class MemberController {
 			memberService.saveMember(member);
 		} catch (Exception e) {
 			model.addAttribute("errorMessage" , e.getMessage());
-			return "member/memberNew";
+			return "member/new/memberNew";
 		}
 		
 		return "redirect:/";

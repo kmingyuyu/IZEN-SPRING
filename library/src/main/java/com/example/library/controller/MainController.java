@@ -26,7 +26,7 @@ public class MainController {
 		
 		Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0 , 6);
 		
-		Page<MainBookDto> newBooks = bookService.getMainBookNewPage(bookSearchDto, pageable);
+		Page<MainBookDto> newBooks = bookService.getBookNewPage(bookSearchDto, pageable);
 		
 		Page<MainBookDto> countBooks = bookService.getMainBookCountPage(bookSearchDto, pageable);
 		

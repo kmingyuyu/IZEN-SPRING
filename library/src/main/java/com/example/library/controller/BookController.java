@@ -17,8 +17,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.example.library.constant.TypeOk;
 import com.example.library.dto.BookFormDto;
 import com.example.library.dto.BookSearchDto;
+import com.example.library.dto.MainBookDto;
 import com.example.library.entity.Book;
 import com.example.library.service.BookService;
 
@@ -31,7 +33,7 @@ public class BookController {
 	
 	private final BookService bookService;
 	
-//	상품 등록 페이지
+//	도서 등록 페이지
 	@GetMapping(value="/admin/book/new")
 	public String bookForm(Model model) {
 		
@@ -39,7 +41,7 @@ public class BookController {
 		
 		model.addAttribute("bookFormDto" , bookFormDto);
 		
-		return "book/bookForm";
+		return "admin/reg/bookForm";
 	}
 	
 //	도서 등록 기능
@@ -49,20 +51,20 @@ public class BookController {
 			Model model , @RequestParam("bookImgFile") List<MultipartFile> bookImgFileList) {
 		
 		if(bindingResult.hasErrors()) {
-			return "book/bookForm";
+			return "admin/reg/bookForm";
 		}
 		
 		if(bookImgFileList.get(0).isEmpty()) {
 			model.addAttribute("errorMessage", "책의 메인 이미지는 필수입니다.");
-			return "book/bookForm";
+			return "admin/reg/bookForm";
 		}
 		if(bookImgFileList.get(1).isEmpty()) {
 			model.addAttribute("errorMessage", "책의 사이드 이미지는 필수입니다.");
-			return "book/bookForm";
+			return "admin/reg/bookForm";
 		}
 		if(bookImgFileList.get(2).isEmpty()) {
 			model.addAttribute("errorMessage", "책의 뒷면 이미지는 필수입니다.");
-			return "book/bookForm";
+			return "admin/reg/bookForm";
 		}
 		
 		try {
@@ -70,7 +72,7 @@ public class BookController {
 		} catch (Exception e) {
 			e.printStackTrace();
 			model.addAttribute("errorMessage" , "상품 등록 중 에러가 발생했습니다");
-			return "book/bookForm";
+			return "admin/reg/bookForm";
 		}
 		
 		
@@ -94,51 +96,9 @@ public class BookController {
 		model.addAttribute("bookSearchDto" , bookSearchDto);
 		model.addAttribute("maxPage" , 5);
 		
-		return "/book/bookMng";
+		return "admin/mng/bookMng";
 	}
 	
-	@GetMapping(value = {"/admin/books/stock_y" , "/admin/books/stock_y/{page}"})
-	public String bookManage_stock_y(BookSearchDto bookSearchDto ,  @PathVariable("page") Optional<Integer> page , Model model) {
-		
-		
-		Pageable pageable = PageRequest.of(page.isPresent() ?  page.get() : 0 , 10);
-		
-		Page<Book> books = bookService.getAdminBookPage(bookSearchDto, pageable);
-		
-		model.addAttribute("books" , books);
-		model.addAttribute("bookSearchDto" , bookSearchDto);
-		model.addAttribute("maxPage" , 5);
-		
-		return "/book/bookMng";
-	}
-	
-	@GetMapping(value = {"/admin/books/stock_n" , "/admin/books/stock_n/{page}"})
-	public String bookManage_stock_n(BookSearchDto bookSearchDto ,  @PathVariable("page") Optional<Integer> page , Model model) {
-		
-		
-		Pageable pageable = PageRequest.of(page.isPresent() ?  page.get() : 0 , 10);
-		
-		Page<Book> books = bookService.getAdminBookPage(bookSearchDto, pageable);
-		
-		model.addAttribute("books" , books);
-		model.addAttribute("bookSearchDto" , bookSearchDto);
-		model.addAttribute("maxPage" , 5);
-		
-		return "/book/bookMng";
-	}
-	
-	
-	
-//	상세페이지
-	@GetMapping(value = "/book/{bookId}")
-	public String bookDetail(Model model , @PathVariable("bookId") Long bookId){
-		
-		BookFormDto bookFormDto = bookService.getBookDetail(bookId);
-		model.addAttribute("now",LocalDateTime.now());
-		model.addAttribute("book" , bookFormDto);
-		return "book/bookDetail";
-		
-	}
 	
 //	수정 페이지
 	@GetMapping(value="admin/book/update/{bookId}") 
@@ -154,7 +114,7 @@ public class BookController {
 			model.addAttribute("bookFormDto" , new BookFormDto());
 		}
 		  
-		return "book/bookModifyForm";
+		return "admin/reg/bookModifyForm";
 		  
 	  }
 	 
@@ -165,12 +125,12 @@ public class BookController {
 			Model model , @RequestParam("bookImgFile") List<MultipartFile> bookImgFileList) {
 		
 		if(bindingResult.hasErrors()) {
-			return "book/bookModifyForm";
+			return "admin/reg/bookModifyForm";
 		}
 		
 		if(bookImgFileList.get(0).isEmpty() && bookFormDto.getId() == null) {
 			model.addAttribute("errorMessage", "책의 메인 이미지는 필수입니다.");
-			return "book/bookModifyForm";
+			return "admin/reg/bookModifyForm";
 		}
 		
 		try {
@@ -178,7 +138,7 @@ public class BookController {
 		} catch (Exception e) {
 			e.printStackTrace();
 			model.addAttribute("errorMessage" , "상품 등록 중 에러가 발생했습니다");
-			return "book/bookModifyForm";
+			return "admin/reg/bookModifyForm";
 		}
 		
 		return "redirect:/";
@@ -200,7 +160,35 @@ public class BookController {
 		
 	}
 	
+//	상세페이지
+	@GetMapping(value = "/book/{bookId}")
+	public String bookDetail(Model model , @PathVariable("bookId") Long bookId){
+		
+		BookFormDto bookFormDto = bookService.getBookDetail(bookId);
+		model.addAttribute("book" , bookFormDto);
+		
+		return "member/book/bookDetail";
+		
+	}
 	
+//	도서 전체페이지 ( 신착도서 순 )
+	@GetMapping
+	(value = {"/book/totalNew" , "/book/totalNew/{page}", 
+			  "/book/totalNew/" })
+	public String bookTotalNew(BookSearchDto bookSearchDto , Model model ,
+			@PathVariable("page") Optional<Integer> page
+			) {
+		
+		Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0 , 12);
+		Page<MainBookDto> books = bookService.getBookNewPage(bookSearchDto, pageable);
+		
+		
+		model.addAttribute("books" ,  books);
+		model.addAttribute("bookSearchDto" ,  bookSearchDto);
+		model.addAttribute("maxPage" , 5);
+		
+		return "member/book/bookTotalNew";
+	}
 	
 	
 	
