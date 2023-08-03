@@ -39,16 +39,6 @@ public class MemberController {
 		return "member/new/memberNew";
 	}
 	
-	@GetMapping(value="/member/new1")
-	public String memberNew1(Model model) {
-		return "member/new/memberNew1";
-	}
-	
-	@GetMapping(value="/member/new2")
-	public String memberNew2(Model model) {
-		return "member/new/memberNew2";
-	}
-	
 	
 	
 	
