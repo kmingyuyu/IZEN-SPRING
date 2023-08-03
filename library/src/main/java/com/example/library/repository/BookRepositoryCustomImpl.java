@@ -54,6 +54,14 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 		
 	}
 	
+	private BooleanExpression typeOkEq(TypeOk typeOk) {
+		
+		return typeOk == null ? null : QBook.book.typeOk.eq(typeOk);
+		
+	}
+	
+	
+	
 	private BooleanExpression searchByLike(String searchBy , String searchQuery) {
 		
 		if(StringUtils.equals("bookName", searchBy)) {
@@ -120,13 +128,15 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 								book.pubDate,
 								book.publisher,
 								bookImg.imgUrl,
-								book.typeOk
+								book.typeOk,
+								book.borrowCount
 								)
 						)
 				.from(bookImg)
 				.join(bookImg.book , book)
 				.where(bookImg.imgChoiceOk.eq(ImgChoiceOk.MAIN))
-				.where(searchByLike(bookSearchDto.getSearchBy(), bookSearchDto.getSearchQuery()))
+				.where(typeOkEq(bookSearchDto.getTypeOk()) ,
+						searchByLike(bookSearchDto.getSearchBy(), bookSearchDto.getSearchQuery()))
 				.orderBy(book.id.desc())
 				.offset(pageable.getOffset())
 				.limit(pageable.getPageSize())
@@ -137,7 +147,8 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 				.from(bookImg)
 				.join(bookImg.book , book)
 				.where(bookImg.imgChoiceOk.eq(ImgChoiceOk.MAIN)) 
-				.where(searchByLike(bookSearchDto.getSearchBy(), bookSearchDto.getSearchQuery()))
+				.where(typeOkEq(bookSearchDto.getTypeOk()) ,
+					   searchByLike(bookSearchDto.getSearchBy(), bookSearchDto.getSearchQuery()))
 				.fetchOne();
 		
 		return new PageImpl<>(content , pageable , total);
@@ -146,7 +157,7 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 
 //	총대출수 많은 순으로 
 	@Override
-	public Page<MainBookDto> getMainBookCountPage(BookSearchDto bookSearchDto, Pageable pageable) {
+	public Page<MainBookDto> getBookCountPage(BookSearchDto bookSearchDto, Pageable pageable) {
 		
 		QBook book = QBook.book;
 		QBookImg bookImg = QBookImg.bookImg;
@@ -160,14 +171,16 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 								book.pubDate,
 								book.publisher,
 								bookImg.imgUrl,
-								book.typeOk
+								book.typeOk,
+								book.borrowCount
 								)
 						)
 				.from(bookImg)
 				.join(bookImg.book , book)
 				.where(bookImg.imgChoiceOk.eq(ImgChoiceOk.MAIN))
-				.where(bookNmLike(bookSearchDto.getSearchQuery()))
-				.orderBy(book.borrowCount.asc())
+				.where(typeOkEq(bookSearchDto.getTypeOk()) ,
+						searchByLike(bookSearchDto.getSearchBy(), bookSearchDto.getSearchQuery()))
+				.orderBy(book.borrowCount.desc())
 				.offset(pageable.getOffset())
 				.limit(pageable.getPageSize())
 				.fetch();
@@ -177,7 +190,8 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
 				.from(bookImg)
 				.join(bookImg.book , book)
 				.where(bookImg.imgChoiceOk.eq(ImgChoiceOk.MAIN))
-				.where(bookNmLike(bookSearchDto.getSearchQuery()))
+				.where(typeOkEq(bookSearchDto.getTypeOk()) ,
+						searchByLike(bookSearchDto.getSearchBy(), bookSearchDto.getSearchQuery()))
 				.fetchOne();
 		
 		

@@ -28,7 +28,7 @@ public class MainController {
 		
 		Page<MainBookDto> newBooks = bookService.getBookNewPage(bookSearchDto, pageable);
 		
-		Page<MainBookDto> countBooks = bookService.getMainBookCountPage(bookSearchDto, pageable);
+		Page<MainBookDto> countBooks = bookService.getBookCountPage(bookSearchDto, pageable);
 		
 		
 		model.addAttribute("newBooks" ,  newBooks);

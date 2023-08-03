@@ -142,8 +142,8 @@ public class BookService {
 	}
 	
 	@Transactional(readOnly = true)
-	public Page<MainBookDto> getMainBookCountPage(BookSearchDto bookSearchDto , Pageable pageable) {
-		Page<MainBookDto> mainBookPage = bookRepository.getMainBookCountPage(bookSearchDto, pageable);
+	public Page<MainBookDto> getBookCountPage(BookSearchDto bookSearchDto , Pageable pageable) {
+		Page<MainBookDto> mainBookPage = bookRepository.getBookCountPage(bookSearchDto, pageable);
 		return mainBookPage;
 		
 	}

@@ -24,8 +24,10 @@ public class MainBookDto {
 	
 	private String imgUrl;
 	
+	private int borrowCount;
+	
 	@QueryProjection
-	public MainBookDto(Long id ,String bookName,String writer ,String pubDate ,String publisher ,String imgUrl , TypeOk typeOk) {
+	public MainBookDto(Long id ,String bookName,String writer ,String pubDate ,String publisher ,String imgUrl , TypeOk typeOk , int borrowCount) {
 		this.id = id;
 		this.bookName = bookName;
 		this.writer = writer;
@@ -33,6 +35,7 @@ public class MainBookDto {
 		this.publisher = publisher;
 		this.imgUrl = imgUrl;
 		this.typeOk = typeOk;
+		this.borrowCount = borrowCount;
 		
 	}
 	

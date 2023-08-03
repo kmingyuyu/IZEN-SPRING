@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.querydsl.core.types.dsl.BooleanExpression"/>
-    <fullyQualifiedTypeName name="org.thymeleaf.util.StringUtils"/>
     <fullyQualifiedTypeName name="com.example.library.entity.QBook"/>
     <fullyQualifiedTypeName name="com.querydsl.core.types.dsl.Wildcard"/>
     <fullyQualifiedTypeName name="org.springframework.data.domain.PageImpl"/>
@@ -59,5 +57,7 @@
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="com.querydsl.core.types.dsl.BooleanExpression"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.example.library.constant.TypeOk"/>
 </qualifiedTypeNameHistroy>

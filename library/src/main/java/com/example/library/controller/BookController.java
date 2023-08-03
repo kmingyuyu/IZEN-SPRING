@@ -174,7 +174,7 @@ public class BookController {
 //	도서 전체페이지 ( 신착도서 순 )
 	@GetMapping
 	(value = {"/book/totalNew" , "/book/totalNew/{page}", 
-			  "/book/totalNew/" })
+			   })
 	public String bookTotalNew(BookSearchDto bookSearchDto , Model model ,
 			@PathVariable("page") Optional<Integer> page
 			) {
@@ -182,13 +182,31 @@ public class BookController {
 		Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0 , 12);
 		Page<MainBookDto> books = bookService.getBookNewPage(bookSearchDto, pageable);
 		
-		
 		model.addAttribute("books" ,  books);
 		model.addAttribute("bookSearchDto" ,  bookSearchDto);
 		model.addAttribute("maxPage" , 5);
 		
 		return "member/book/bookTotalNew";
 	}
+	
+	@GetMapping
+	(value = {"/book/totalCount" , "/book/totalCount/{page}", 
+			   })
+	public String bookTotalCount(BookSearchDto bookSearchDto , Model model ,
+			@PathVariable("page") Optional<Integer> page
+			) {
+		
+		Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0 , 12);
+		Page<MainBookDto> books = bookService.getBookCountPage(bookSearchDto, pageable);
+		
+		model.addAttribute("books" ,  books);
+		model.addAttribute("bookSearchDto" ,  bookSearchDto);
+		model.addAttribute("maxPage" , 5);
+		
+		return "member/book/bookTotalCount";
+	}
+	
+	
 	
 	
 	
