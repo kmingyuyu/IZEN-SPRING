@@ -20,6 +20,7 @@ import lombok.RequiredArgsConstructor;
 @Controller
 @RequiredArgsConstructor
 public class MainController {
+	
 	private final ItemService itemService;
 	
 	@GetMapping(value = "/")
@@ -32,14 +33,19 @@ public class MainController {
 		List<ItemRankDto> itemsRank = itemService.getItemRankList();
 		
 		
-		
 		model.addAttribute("items", items);
 		model.addAttribute("itemsRank", itemsRank);
 		model.addAttribute("itemSearchDto", itemSearchDto); //아직 사용X
 				
 		return "main";
 		
+		
+		
+		
+		
 	}
+	
+	
 	
 	
 	

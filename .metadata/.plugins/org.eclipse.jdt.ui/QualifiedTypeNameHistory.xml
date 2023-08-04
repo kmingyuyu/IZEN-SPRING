@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.example.library.entity.QBook"/>
-    <fullyQualifiedTypeName name="com.querydsl.core.types.dsl.Wildcard"/>
-    <fullyQualifiedTypeName name="org.springframework.data.domain.PageImpl"/>
-    <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
-    <fullyQualifiedTypeName name="com.example.library.dto.MainBookDto"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
-    <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.WebMvcConfigurer"/>
-    <fullyQualifiedTypeName name="com.example.library.dto.BookFormDto"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="com.example.library.dto.BookImgDto"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
-    <fullyQualifiedTypeName name="com.example.library.config.WebMvcConfig"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpMethod"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="org.springframework.web.filter.HiddenHttpMethodFilter"/>
@@ -60,4 +48,16 @@
     <fullyQualifiedTypeName name="com.querydsl.core.types.dsl.BooleanExpression"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.example.library.constant.TypeOk"/>
+    <fullyQualifiedTypeName name="com.wrapper.spotify.SpotifyApi"/>
+    <fullyQualifiedTypeName name="com.neovisionaries.i18n.CountryCode"/>
+    <fullyQualifiedTypeName name="com.shopmax.service.TestService"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="se.michaelthelin.spotify.SpotifyApi"/>
+    <fullyQualifiedTypeName name="se.michaelthelin.spotify.requests.authorization.client_credentials.ClientCredentialsRequest"/>
+    <fullyQualifiedTypeName name="se.michaelthelin.spotify.model_objects.credentials.ClientCredentials"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="se.michaelthelin.spotify.exceptions.SpotifyWebApiException"/>
+    <fullyQualifiedTypeName name="java.text.ParseException"/>
+    <fullyQualifiedTypeName name="com.shopmax.service.CreateToken"/>
+    <fullyQualifiedTypeName name="com.shopmax.service.MusicSearch"/>
 </qualifiedTypeNameHistroy>
