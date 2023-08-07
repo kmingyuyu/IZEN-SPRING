@@ -11034,3 +11034,74 @@ java.io.IOException: Wrong format
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2405)
 	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2023-08-07 18:20:04.493 -----------------------------------------------
+eclipse.buildId=4.27.0.20230309-1200
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2023-08-07 18:20:05.752
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-08-07 18:20:08.304
+!MESSAGE Logback config file: C:\MINGYU SPRING\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-08-07 18:20:10.306
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-08-07 18:20:10.306
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-07 18:20:13.983
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-07 18:20:14.034
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 48496
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-08-07 18:20:16.177
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\EZEN-40'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-07 18:20:16.266
+!MESSAGE Boot project ADDED: 3jo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-07 18:20:16.309
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-07 18:20:16.514
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-07 18:20:16.574
+!MESSAGE Boot project ADDED: book
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-07 18:20:16.751
+!MESSAGE Boot project ADDED: gitTest
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-07 18:20:16.855
+!MESSAGE Boot project ADDED: library
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-07 18:20:16.890
+!MESSAGE Boot project ADDED: shopmax
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-08-07 18:20:16.973
+!MESSAGE Boot project ADDED: spotify

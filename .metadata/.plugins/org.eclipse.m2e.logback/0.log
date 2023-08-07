@@ -16671,3 +16671,4 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.github.th
 2023-08-07 18:14:28,415 [Worker-246: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources from src\main\resources to target\classes
 2023-08-07 18:14:28,436 [Worker-246: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 72 resources from src\main\resources to target\classes
 2023-08-07 18:14:28,514 [Worker-246: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\MINGYU SPRING\shopmax\src\test\resources
+2023-08-07 18:20:16,101 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
