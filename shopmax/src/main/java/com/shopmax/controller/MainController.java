@@ -1,11 +1,13 @@
 package com.shopmax.controller;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +22,7 @@ import lombok.RequiredArgsConstructor;
 @Controller
 @RequiredArgsConstructor
 public class MainController {
-	
+	 
 	private final ItemService itemService;
 	
 	@GetMapping(value = "/")
@@ -31,6 +33,10 @@ public class MainController {
 		Page<MainItemDto> items = itemService.getMainItemPage(itemSearchDto, pageable);
 		
 		List<ItemRankDto> itemsRank = itemService.getItemRankList();
+		
+		
+	//	System.out.println(authentication.getName() + "88888");
+		
 		
 		
 		model.addAttribute("items", items);

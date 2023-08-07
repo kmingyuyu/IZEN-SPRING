@@ -25,4 +25,8 @@ public class MemberFormDto {
 	
 	@NotEmpty(message = "주소는 필수입력 값입니다.")
 	private String address;
+	
+	
+	
+	
 }

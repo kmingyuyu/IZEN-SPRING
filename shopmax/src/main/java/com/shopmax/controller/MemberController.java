@@ -30,6 +30,7 @@ public class MemberController {
 	//로그인 화면
 	@GetMapping(value = "/members/login")
 	public String loginMember() {
+		
 		return "member/memberLoginForm";
 	}
 	
@@ -37,6 +38,7 @@ public class MemberController {
 	@GetMapping(value = "/members/new")
 	public String memberForm(Model model) {
 		model.addAttribute("memberFormDto", new MemberFormDto());
+		
 		return "member/memberForm";
 	}
 	
