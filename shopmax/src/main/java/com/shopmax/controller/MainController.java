@@ -35,7 +35,7 @@ public class MainController {
 		List<ItemRankDto> itemsRank = itemService.getItemRankList();
 		
 		
-	//	System.out.println(authentication.getName() + "88888");
+//		System.out.println(authentication.getName() + "88888");
 		
 		
 		
@@ -51,6 +51,12 @@ public class MainController {
 		
 	}
 	
+	
+	@GetMapping("/test")
+	public String test() {
+		
+		return "gptTest";
+	}
 	
 	
 	

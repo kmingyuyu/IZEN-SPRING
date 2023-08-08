@@ -9,8 +9,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 @Table(name = "member")
 @Getter

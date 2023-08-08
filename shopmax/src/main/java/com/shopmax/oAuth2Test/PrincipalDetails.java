@@ -24,10 +24,10 @@ public class PrincipalDetails implements UserDetails, OAuth2User {
 	        this.member = member;
 	    }
 	 
-	 public PrincipalDetails (Member member, Map<String, Object> attributes) {
+	 public PrincipalDetails (Member member, Oauth2UserInfo oAuth2UserInfo) {
 	        //PrincipalOauth2UserService 참고
 	        this.member = member;
-	        this.attributes = attributes;
+	        this.attributes = oAuth2UserInfo.getAttributes();
 	    }
 
 	@Override
