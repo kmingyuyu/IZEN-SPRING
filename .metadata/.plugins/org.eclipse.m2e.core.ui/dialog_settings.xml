@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\EZEN-40\Desktop\3조\recipe"/>
+			<item value="C:\recipe"/>
+			<item value="C:\MINGYU SPRING(TEAM_PROJECT)\spotify"/>
 			<item value="C:\MINGYU SPRING(TEAM_PROJECT)\3jo"/>
 			<item value="C:\Users\82107\Desktop\수업\IZEN.SPRING\book"/>
 			<item value="C:\Users\82107\Desktop\수업\IZEN.SPRING\shopmax"/>
@@ -14,9 +17,6 @@
 			<item value="C:\MINGYU SPRING\gitTest"/>
 			<item value="C:\MINGYU SPRING\library"/>
 			<item value="C:\MINGYU SPRING\shopmax"/>
-			<item value="C:\shopmax"/>
-			<item value="C:\MINGYU SPRING\board2"/>
-			<item value="C:\MINGYU SPRING\book\src\main\resources\templates\content\book\bookMain.html"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

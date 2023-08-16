@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    ttt
+  </body>
+
+  <script>
+    var request = require("http://localhost:8888/callback"); // "Request" library
+
+    var client_id = "c71adf3067e148b092665a2b961c12d3"; // Your client id
+    var client_secret = "4bae06913e8145d99962a8a0b636d195"; // Your secret
+
+    // your application requests authorization
+    var authOptions = {
+      url: "https://accounts.spotify.com/api/token",
+      headers: {
+        Authorization:
+          "Basic " +
+          new Buffer(client_id + ":" + client_secret).toString("base64"),
+      },
+      form: {
+        grant_type: "client_credentials",
+      },
+      json: true,
+    };
+
+    request.post(authOptions, function (error, response, body) {
+      if (!error && response.statusCode === 200) {
+        // use the access token to access the Spotify Web API
+        var token = body.access_token;
+        var options = {
+          url: "https://api.spotify.com/v1/users/jmperezperez",
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+          json: true,
+        };
+        request.get(options, function (error, response, body) {
+          console.log(body);
+        });
+      }
+    });
+  </script>
+</html>
