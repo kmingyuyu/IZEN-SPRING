@@ -252,7 +252,7 @@
 }
 
 .item {
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 .item.item-related-book .item-cover {
@@ -307,10 +307,54 @@
 }
 
 .collection-item {
-    margin: 38px 0 0 0;
+    padding: 20px 0 0 0;
 }
 
-.slick-next:before, .slick-prev:before {
-	color: #0D6EFD !important;
-}      
+/* 버튼 위치 변경 */
+.slick-dots{
+  bottom : 0 !important;
+}
+/* 버튼 색상 변경 (마우스 오버)  */
+.slick-dots li button:hover:before, .slick-dots li button:focus:before{
+  color: red ;
+}
+
+/* 버튼 색상 변경 (활성화)  */
+.slick-dots li.slick-active button:before{
+  color: red !important;  
+}
+
+/* 버튼 색상 변경 (비활성화)  */
+.slick-dots li button:before{
+  color: red !important;  
+}
+
+/* 화살표 색상 변경*/
+.slick-prev:before, .slick-next:before{
+  font-size: 35px !important;
+  color: #0D6EFD !important;
+  opacity: 1 ; 
+}
+/* 화살표 위치 변경 */
+.slick-prev{
+  left: 6px !important ;
+  z-index: 9 ;
+}
+.slick-next{
+  right: 20px !important ;
+  z-index: 9 ;  
+}
+
+.slick-next:before {
+    content: '>' !important;
+}
+
+.slick-prev:before {
+    content: '<' !important;
+}
+
+
+
+
+      
       

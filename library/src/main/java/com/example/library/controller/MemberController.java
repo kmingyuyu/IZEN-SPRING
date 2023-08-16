@@ -31,6 +31,13 @@ public class MemberController {
 		return "member/new/login";
 	}
 	
+//	로그인 화면
+	@GetMapping(value="/member/login_test")
+	public String login_test() {
+		return "member/new/loginForm";
+	}
+	
+	
 	
 //	회원가입 화면
 	@GetMapping(value="/member/new")
