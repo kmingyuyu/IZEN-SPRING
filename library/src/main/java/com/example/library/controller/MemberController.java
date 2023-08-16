@@ -31,22 +31,19 @@ public class MemberController {
 		return "member/new/login";
 	}
 	
+//	로그인 화면
+	@GetMapping(value="/member/login_test")
+	public String login_test() {
+		return "member/new/loginForm";
+	}
+	
+	
 	
 //	회원가입 화면
 	@GetMapping(value="/member/new")
 	public String member(Model model) {
 		model.addAttribute("memberDto" , new MemberDto());
 		return "member/new/memberNew";
-	}
-	
-	@GetMapping(value="/member/new1")
-	public String memberNew1(Model model) {
-		return "member/new/memberNew1";
-	}
-	
-	@GetMapping(value="/member/new2")
-	public String memberNew2(Model model) {
-		return "member/new/memberNew2";
 	}
 	
 	
