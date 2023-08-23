@@ -57,7 +57,15 @@ public class Member extends BaseEntity {
 		this.address = address;
 	}
 	
-	
+	public  void updateMember(MemberFormDto memberFormDto) {
+		this.password = memberFormDto.getPassword();
+	}
+	public String  updatePassword(String pass,PasswordEncoder passwordEncoder) {
+		String password = passwordEncoder.encode(pass);
+		this.password = password;
+
+		return password;
+	} 
 	
 	@Builder(builderClassName = "MemberDetailRegister", builderMethodName = "MemberDetailRegister")
     public Member(String name, String password, String email, Role role) {

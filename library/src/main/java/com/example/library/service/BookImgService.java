@@ -1,5 +1,6 @@
 package com.example.library.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,7 +17,10 @@ import lombok.RequiredArgsConstructor;
 @Transactional
 public class BookImgService {
 	
-	private String bookImgLocation = "C:/library/book";
+	/* private String bookImgLocation = "C:/library/book"; */
+	
+	@Value("${bookImgLocation}")
+	private String bookImgLocation;
 	
 	private final BookImgRepository bookImgRepository;
 	
