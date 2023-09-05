@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\EZEN-40\Downloads\recipe-final\recipe-final"/>
+			<item value="C:\개인프로젝트\library"/>
+			<item value="C:\이젠맛있게"/>
 			<item value="C:\izenTest"/>
 			<item value="C:\test"/>
 			<item value="C:\MINGYU SPRING\이젠맛있게\develope\recipe"/>
@@ -14,9 +17,6 @@
 			<item value="C:\Users\82107\Desktop\수업\IZEN.SPRING\book"/>
 			<item value="C:\Users\82107\Desktop\수업\IZEN.SPRING\shopmax"/>
 			<item value="C:\Users\82107\Desktop\수업\IZEN.SPRING\library"/>
-			<item value="C:\gitExam\gitExam"/>
-			<item value="C:\gitExam\gitExam\gitExam"/>
-			<item value="C:\gitExam"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
